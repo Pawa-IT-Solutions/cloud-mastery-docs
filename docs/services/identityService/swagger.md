@@ -1,1 +1,0 @@
-<swagger-ui src="https://storage.googleapis.com/transmall-api-docs/identity-service.json"/>

@@ -1,16 +1,9 @@
-## Endpoints
-| Environment | Base Url                                                |
-| ----------- | --------------------------------------------------------- |
-| `Staging`   | https://api.transmall.ke |
+# DevOps & Security Training Plan
 
+Welcome to the DevOps & Security training session!
 
-### Microservices
+This guide provides a complete, step-by-step walkthrough of the hands-on labs we will be covering. Please follow the sections in order to ensure your environment is set up correctly for subsequent steps.
 
-| Feature     | Completion Status                    |
-| ----------- | ------------------------------------ |
-| `Identity`  | In Progress |
-| `Core`      | Pending    |
-| `Payments`  | Pending    |
-| `Reports`  | Pending    |
-| `Notifications` | In Progress  |
+**Trainer**: Basil Ndonga (DevOps Engineer)
 
+Let's get started!
