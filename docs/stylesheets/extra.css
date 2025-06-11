@@ -1,0 +1,20 @@
+.md-typeset {
+  font-size: .85rem;
+}
+.md-typeset img, .md-typeset svg, .md-typeset video {
+  border-radius: 0.375rem;
+}
+
+:root {
+  --md-primary-fg-color: #002c4b;
+  --md-primary-fg-color--light: #ecb7b7;
+  --md-primary-fg-color--dark: #2663ac;
+  /* --md-text-font: "Sofia Pro", Roboto, sans-serif; */
+}
+
+.md-typeset a {
+ color: #ef880b;
+}
+.md-nav__item .md-nav__link--active {
+  color: #0ea5e9;
+}
