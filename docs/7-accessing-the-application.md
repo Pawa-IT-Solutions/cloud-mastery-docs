@@ -39,6 +39,7 @@ This is the final step. We will manually run our newly created frontend trigger,
 You have successfully built and deployed a full-stack, database-driven application on Google Cloud.
 
 Throughout this lab, you have:
+
 -   Prepared a Google Cloud environment and used the Cloud Shell.
 -   Populated a managed Cloud SQL database.
 -   Forked repositories and configured GitHub with SSH for secure access.

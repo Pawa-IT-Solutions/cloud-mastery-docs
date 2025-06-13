@@ -39,9 +39,9 @@ We will clone the frontend into a separate directory within our Cloud Shell home
     ![Open a New Cloud Shell Terminal](assets/images/cloudshell_open_new_terminal.png)
 
 3.  Run the `git clone` command, pasting the frontend repository's SSH URL you just copied.
-
-    ```shell
     # Replace the URL with your own forked repository SSH URL
+
+    ```
     git clone git@github.com:austinkaruru1/cloud-mastery-frontend.git
     ```
 
@@ -49,13 +49,13 @@ We will clone the frontend into a separate directory within our Cloud Shell home
 
 4.  List the contents of your home directory. You should now see folders for both the backend and frontend repositories.
 
-    ```shell
+    ```
     ls -l
     ```
     ![List Both Cloned Repositories](assets/images/cloudshell_list_both_repos.png)
 
 5.  Navigate into the new frontend directory to confirm the files are there.
-    ```shell
+    ```
     cd cloud-mastery-frontend && ls -l
     ```
 
