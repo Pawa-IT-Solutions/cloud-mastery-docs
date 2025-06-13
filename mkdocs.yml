@@ -1,98 +1,27 @@
-site_name: Cloud Mastery
-extra_css:
-  - stylesheets/extra.css
+site_name: DevOps & Security Training
+site_author: Basil Ndonga
+site_description: A training guide for the DevOps & Security chapter.
+
 theme:
-  name: mkdocs
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.path
-    - toc.follow
-    - navigation.sections
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
+  name: material
   palette:
+    # Palette toggle for light vs dark mode
     - scheme: default
-      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  font:
-    text: "Roboto"
-    code: "Roboto Mono"
-  favicon: assets/images/logo.svg
-  icon:
-    logo: logo
-  logo: assets/images/logo.svg
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - content.code.annotate
 
-# Plugins
-plugins:
-  - search:
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true
-  - swagger-ui-tag
-
-# Extensions
-markdown_extensions:
-  - tables
-  - abbr
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - toc:
-      permalink: false
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  # - pymdownx.emoji:
-  #     emoji_generator: !!python/name:materialx.emoji.to_svg
-  #     emoji_index: !!python/name:materialx.emoji.twemoji
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-
+# Navigation Structure
 nav:
-  - Home: index.md
-  - Identity Service:
-      - Overview: services/identityService/identityService.md
-      - API Reference: services/identityService/swagger.md
-  - Core Service:
-      - Overview: services/coreService/coreService.md
-      - API Reference: services/coreService/swagger.md
+  - 'Introduction': index.md
+  - '1. Prepare GCP Environment': 1-prepare-gcp-environment.md
+  - '2. Setup Cloud SQL Database': 2-setup-cloud-sql.md
