@@ -1,8 +1,5 @@
 # Resources
 https://collabnix.com/how-to-deploy-a-static-site-using-mkdocs-and-netlify/
-gcloud storage buckets update gs://BUCKET_NAME --cors-file=file.json
-gcloud storage buckets update gs://BUCKET_NAME --clear-cors
-
 
 # Installation Steps
 brew install python
