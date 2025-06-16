@@ -1,5 +1,5 @@
 # Resources
-https://collabnix.com/how-to-deploy-a-static-site-using-mkdocs-and-netlify/
+[How to Deploy a Static site using mkdocs & netlify](https://collabnix.com/how-to-deploy-a-static-site-using-mkdocs-and-netlify/)
 
 # Installation Steps
 brew install python
