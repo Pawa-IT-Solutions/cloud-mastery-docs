@@ -1,5 +1,5 @@
 # Resources
-https://collabnix.com/how-to-deploy-a-static-site-using-mkdocs-and-netlify/
+[How to Deploy a Static site using mkdocs & netlify](https://collabnix.com/how-to-deploy-a-static-site-using-mkdocs-and-netlify/)
 
 # Installation Steps
 brew install python
@@ -15,9 +15,11 @@ pipx inject mkdocs mkdocs-material pymdown-extensions mkdocs-minify-plugin mkdoc
 
 
 source ~/venv/mkdocs/bin/activate
+
 pip install mkdocs-material pymdown-extensions
 
 pip install mkdocs-minify-plugin
+
 pip install mkdocs-swagger-ui-tag
 
 python3 -m venv ~/venv/mkdocs
