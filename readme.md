@@ -10,13 +10,13 @@ pipx install mkdocs
 ## Make apps globally accessible
 pipx ensurepath
 
-## Inject the material theme and plugins into the mkdocs environment
-pipx inject mkdocs mkdocs-material pymdown-extensions mkdocs-minify-plugin mkdocs-swagger-ui-tag
+## Inject the windmill theme and plugins into the mkdocs environment
+pipx inject mkdocs mkdocs-windmill pymdown-extensions mkdocs-minify-plugin mkdocs-swagger-ui-tag
 
 
 source ~/venv/mkdocs/bin/activate
 
-pip install mkdocs-material pymdown-extensions
+pip install mkdocs-windmill pymdown-extensions
 
 pip install mkdocs-minify-plugin
 

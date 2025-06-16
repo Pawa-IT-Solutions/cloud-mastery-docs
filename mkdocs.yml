@@ -3,22 +3,25 @@ site_author: Basil Ndonga
 site_description: A training guide for the DevOps & Security chapter.
 
 theme:
-  name: material
-  palette:
-    # Palette toggle for light vs dark mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  # name: material
+  # palette:
+  #   # Palette toggle for light vs dark mode
+  #   - scheme: default
+  #     toggle:
+  #       icon: material/brightness-7
+  #       name: Switch to dark mode
+  #   - scheme: slate
+  #     toggle:
+  #       icon: material/brightness-4
+  #       name: Switch to light mode
+  name: windmill
   features:
     - navigation.tabs
     - navigation.top
     - search.suggest
     - content.code.annotate
+extra_css:
+  - assets/css/extra.css  
 
 # Navigation Structure
 nav:
@@ -30,3 +33,7 @@ nav:
   - '5. Setup Frontend Repository': 5-setup-frontend-repo.md
   - '6. Setup Cloud Build for Frontend': 6-setup-cloud-build-frontend.md
   - '7. Access the Application': 7-accessing-the-application.md
+
+extra: 
+  generator: false  # Disable the generator tag in the HTML head
+

@@ -1,4 +1,4 @@
-# DevOps & Security Training Plan
+# DevOps and Security Training Plan
 
 Welcome to the DevOps & Security training session!
 
