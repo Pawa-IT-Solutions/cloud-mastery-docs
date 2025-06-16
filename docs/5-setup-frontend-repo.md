@@ -37,6 +37,7 @@ We will clone the frontend into a separate directory within our Cloud Shell home
         Your document shows opening a new Cloud Shell terminal tab by clicking the `+` icon. This is a great way to manage separate tasks. For this guide, we will perform the clone from the home directory in the same terminal.
 
     ![Open a New Cloud Shell Terminal](assets/images/cloudshell_open_new_terminal.png)
+    ![Two Cloud Shell Terminals](assets/images/2-cloudshells.png)
 
 3.  Run the `git clone` command, pasting the frontend repository's SSH URL you just copied.
     # Replace the URL with your own forked repository SSH URL
@@ -58,6 +59,8 @@ We will clone the frontend into a separate directory within our Cloud Shell home
     ```
     cd cloud-mastery-frontend && ls -l
     ```
+
+    ![List contents of Cloud Mastery Frontend](assets/images/ll-cloud-mastery-frontend.png)
 
 ---
 

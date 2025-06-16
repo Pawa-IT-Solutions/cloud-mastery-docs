@@ -12,7 +12,7 @@ This is the final step. We will manually run our newly created frontend trigger,
 ### Monitor the Build and Access the Application
 
 1.  You will be taken to the **History** page. Click on the running build to monitor its progress.
-2.  Like the backend, this build will take approximately 7 minutes.
+2.  This build will take less time compared to the cloud mastery backend build.
 
     ![Frontend Build History](assets/images/cb_frontend_history.png)
 
