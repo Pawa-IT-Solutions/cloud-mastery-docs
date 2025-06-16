@@ -15,9 +15,11 @@ pipx inject mkdocs mkdocs-material pymdown-extensions mkdocs-minify-plugin mkdoc
 
 
 source ~/venv/mkdocs/bin/activate
+
 pip install mkdocs-material pymdown-extensions
 
 pip install mkdocs-minify-plugin
+
 pip install mkdocs-swagger-ui-tag
 
 python3 -m venv ~/venv/mkdocs
