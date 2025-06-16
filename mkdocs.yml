@@ -25,3 +25,8 @@ nav:
   - 'Introduction': index.md
   - '1. Prepare GCP Environment': 1-prepare-gcp-environment.md
   - '2. Setup Cloud SQL Database': 2-setup-cloud-sql.md
+  - '3. Prepare GitHub & Backend Repo': 3-prepare-github-backend.md
+  - '4. Setup Cloud Build for Backend': 4-setup-cloud-build-backend.md
+  - '5. Setup Frontend Repository': 5-setup-frontend-repo.md
+  - '6. Setup Cloud Build for Frontend': 6-setup-cloud-build-frontend.md
+  - '7. Access the Application': 7-accessing-the-application.md
