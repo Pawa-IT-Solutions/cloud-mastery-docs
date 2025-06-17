@@ -33,6 +33,8 @@ nav:
   - '5. Setup Frontend Repository': 5-setup-frontend-repo.md
   - '6. Setup Cloud Build for Frontend': 6-setup-cloud-build-frontend.md
   - '7. Access the Application': 7-accessing-the-application.md
+  - '8. Virtual Agent Lab Instructions': virtual-agent-lab.md
+
 
 extra: 
   generator: false  # Disable the generator tag in the HTML head
