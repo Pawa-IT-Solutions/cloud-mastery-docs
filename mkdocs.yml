@@ -1,7 +1,7 @@
 site_name: DevOps & Security Training
 site_author: Basil Ndonga
 site_description: A training guide for the DevOps & Security chapter.
-site_url: https://github.com/Pawa-IT-Solutions/cloud-mastery-docs
+site_url: https://docs.cloudpartner.africa
 
 theme:
   name: material
