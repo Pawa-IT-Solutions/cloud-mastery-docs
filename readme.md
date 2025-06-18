@@ -3,28 +3,28 @@
 
 # Installation Steps
 brew install python
+```bash
+# Install mkdocs using Homebrew
 brew install mkdocs
 
-## Install mkdocs as the main application
+# (Recommended) Install mkdocs as an isolated app using pipx
 pipx install mkdocs
-## Make apps globally accessible
+
+# Ensure pipx-installed apps are globally accessible
 pipx ensurepath
 
-## Inject the windmill theme and plugins into the mkdocs environment
+# Inject the windmill theme and plugins into the mkdocs environment
 pipx inject mkdocs mkdocs-windmill pymdown-extensions mkdocs-minify-plugin mkdocs-swagger-ui-tag
 
-
+# (Alternative) Set up a Python virtual environment for mkdocs
+python3 -m venv ~/venv/mkdocs
 source ~/venv/mkdocs/bin/activate
 
-pip install mkdocs-windmill pymdown-extensions
+# Install mkdocs and plugins in the virtual environment
+pip install mkdocs mkdocs-windmill pymdown-extensions mkdocs-minify-plugin mkdocs-swagger-ui-tag
 
-pip install mkdocs-minify-plugin
-
-pip install mkdocs-swagger-ui-tag
-
-python3 -m venv ~/venv/mkdocs
-
-## Running MKDOCS
+# Running mkdocs locally
 mkdocs serve
 
-Access via http://127.0.0.1:8000 or localhost:8000
+# Access the site at http://127.0.0.1:8000 or http://localhost:8000
+```
