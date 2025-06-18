@@ -1,0 +1,860 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A training guide for the DevOps & Security chapter.">
+      
+      
+        <meta name="author" content="Basil Ndonga">
+      
+      
+        <link rel="canonical" href="https://github.com/Pawa-IT-Solutions/cloud-mastery-docs/3-prepare-github-backend/">
+      
+      
+        <link rel="prev" href="../2-setup-cloud-sql/">
+      
+      
+        <link rel="next" href="../4-setup-cloud-build-backend/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>3. Prepare GitHub & Backend Repo - DevOps & Security Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-prepare-github-environment-backend-repo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DevOps &amp; Security Training" class="md-header__button md-logo" aria-label="DevOps & Security Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevOps & Security Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Prepare GitHub & Backend Repo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../1-prepare-gcp-environment/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Prepare GCP Environment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../2-setup-cloud-sql/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  2. Setup Cloud SQL Database
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  3. Prepare GitHub & Backend Repo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../4-setup-cloud-build-backend/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  4. Setup Cloud Build for Backend
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../5-setup-frontend-repo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  5. Setup Frontend Repository
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../6-setup-cloud-build-frontend/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  6. Setup Cloud Build for Frontend
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../7-accessing-the-application/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  7. Access the Application
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DevOps &amp; Security Training" class="md-nav__button md-logo" aria-label="DevOps & Security Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DevOps & Security Training
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-prepare-gcp-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Prepare GCP Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-setup-cloud-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Setup Cloud SQL Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3. Prepare GitHub & Backend Repo
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Prepare GitHub & Backend Repo
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-github-account-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a New GitHub Account (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-the-backend-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fork the Backend Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-cloud-shell-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Cloud Shell SSH Key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-the-repository-to-cloud-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone the Repository to Cloud Shell
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-setup-cloud-build-backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. Setup Cloud Build for Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-setup-frontend-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. Setup Frontend Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-setup-cloud-build-frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. Setup Cloud Build for Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-accessing-the-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7. Access the Application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-github-account-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a New GitHub Account (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-the-backend-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fork the Backend Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-cloud-shell-ssh-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Cloud Shell SSH Key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-the-repository-to-cloud-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone the Repository to Cloud Shell
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-prepare-github-environment-backend-repo">3. Prepare GitHub Environment &amp; Backend Repo</h1>
+<p>For this lab, we will work with two application repositories: <code>cloud-mastery-backend</code> and <code>cloud-mastery-frontend</code>. First, we need to set up your GitHub account and configure it to work with your Google Cloud Shell environment.</p>
+<p><strong>Do you have a GitHub Account?</strong>
+    If you already have a GitHub account, you can skip directly to the <strong><a href="#fork-the-backend-repository">Fork the Backend Repository</a></strong> section.</p>
+<hr />
+<h3 id="create-a-new-github-account-optional">Create a New GitHub Account (Optional)</h3>
+<ol>
+<li>
+<p>Navigate to the GitHub signup page: <a href="https://github.com/signup">github.com/signup</a>.</p>
+</li>
+<li>
+<p>Fill in your details (email, password, username) to create your account.</p>
+<p><img alt="GitHub Signup Page" src="../assets/images/github_signup_page.png" /></p>
+</li>
+<li>
+<p>Complete the "Verify your account" puzzle to prove you're human.</p>
+<p><img alt="GitHub Account Verification Puzzle" src="../assets/images/github_verify_account.png" /></p>
+</li>
+<li>
+<p>GitHub will send a verification code to your email address. Enter this code to confirm your email.</p>
+<p><img alt="Confirm Your Email Address" src="../assets/images/github_confirm_email.png" /></p>
+</li>
+<li>
+<p>Once verified, proceed to sign in. Your new GitHub account is now ready!</p>
+<p><img alt="New GitHub Account Dashboard" src="../assets/images/github_dashboard_ready.png" /></p>
+</li>
+</ol>
+<hr />
+<h3 id="fork-the-backend-repository">Fork the Backend Repository</h3>
+<p>You need your own copy of the application repository to make changes. This is done by "forking" it.</p>
+<ol>
+<li>
+<p>Access the Cloud Mastery backend repository here:
+    <a href="https://github.com/Pawa-IT-Solutions/cloud-mastery-backend">https://github.com/Pawa-IT-Solutions/cloud-mastery-backend</a></p>
+</li>
+<li>
+<p>Click the <strong>Fork</strong> button in the top-right corner.</p>
+<p><img alt="Fork the Backend Repository" src="../assets/images/github_fork_button_backend.png" /></p>
+</li>
+<li>
+<p>On the "Create a new fork" page, you can leave the details as they are and click <strong>Create fork</strong>.</p>
+<p><img alt="Create Fork Page" src="../assets/images/github_create_fork_page_backend.png" /></p>
+</li>
+<li>
+<p>You will be redirected to your own forked copy of the repository. It is now ready!</p>
+<p><img alt="Forked Repository is Ready" src="../assets/images/github_forked_repo_ready_backend.png" /></p>
+</li>
+</ol>
+<hr />
+<h3 id="configure-cloud-shell-ssh-key">Configure Cloud Shell SSH Key</h3>
+<p>To securely clone the repository to your Cloud Shell, you need to add your Cloud Shell's SSH key to your GitHub account.</p>
+<ol>
+<li>
+<p>Navigate back to your <strong>Google Cloud Shell</strong> tab.</p>
+</li>
+<li>
+<p>Run the <code>ssh-keygen</code> command to generate a new SSH key. Press <code>Enter</code> three times to accept the default file location and create a key without a passphrase.</p>
+<p><code>ssh-keygen</code>
+<img alt="Generate SSH Key in Cloud Shell" src="../assets/images/cloudshell_ssh_keygen.png" /></p>
+</li>
+<li>
+<p>Verify that the public key file (<code>id_ed25519.pub</code>) was created.</p>
+<p><code>ls -l .ssh/</code>
+<img alt="List SSH Key Files" src="../assets/images/cloudshell_list_ssh_keys.png" /></p>
+</li>
+<li>
+<p>Display the public key and copy its entire content to your clipboard.</p>
+<p><code>cat .ssh/id_ed25519.pub</code>
+<img alt="Display and Copy Public Key" src="../assets/images/cloudshell_cat_public_key.png" /></p>
+</li>
+<li>
+<p>Head back to your <strong>GitHub</strong> tab. Click on your profile icon in the top-right corner and select <strong>Settings</strong>.</p>
+<p><img alt="Navigate to GitHub Profile" src="../assets/images/github_profile_settings.png" />
+<img alt="Select GitHub Settings" src="../assets/images/github_click_settings.png" /></p>
+</li>
+<li>
+<p>In the left navigation menu, click on <strong>SSH and GPG keys</strong>.</p>
+<p><img alt="SSH and GPG Keys Menu" src="../assets/images/github_ssh_keys_menu.png" /></p>
+</li>
+<li>
+<p>Click <strong>New SSH key</strong>. Give it a descriptive <strong>Title</strong> (e.g., "Google Cloud Shell") and paste the copied key into the <strong>Key</strong> field. Click <strong>Add SSH key</strong>.</p>
+<p><img alt="Add New SSH Key to GitHub" src="../assets/images/github_add_new_ssh_key_page.png" /></p>
+</li>
+</ol>
+<hr />
+<h3 id="clone-the-repository-to-cloud-shell">Clone the Repository to Cloud Shell</h3>
+<p>Now you can clone your forked repository.</p>
+<ol>
+<li>
+<p>In GitHub, navigate to your forked <code>cloud-mastery-backend</code> repository. Click the green <strong>&lt;&gt; Code</strong> button, select the <strong>SSH</strong> tab, and copy the SSH URL.</p>
+<p><img alt="Copy SSH Clone URL" src="../assets/images/github_copy_ssh_clone_url_backend.png" /></p>
+</li>
+<li>
+<p>Go back to your <strong>Cloud Shell</strong> terminal and run the <code>git clone</code> command, pasting the URL you just copied.
+    Replace the URL with your own forked repository SSH URL</p>
+<p><code>git clone git@github.com:austinkaruru1/cloud-mastery-backend.git</code></p>
+</li>
+<li>
+<p>When prompted <code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>, type <code>yes</code> and press <code>Enter</code>.</p>
+<p><img alt="Git Clone Output in Cloud Shell" src="../assets/images/cloudshell_git_clone_backend.png" /></p>
+</li>
+<li>
+<p>Navigate into the newly created directory and list its contents.</p>
+<p><code>cd cloud-mastery-backend &amp;&amp; ls -l</code>
+<img alt="List Cloned Repository Files" src="../assets/images/cloudshell_list_cloned_files_backend.png" /></p>
+</li>
+</ol>
+<hr />
+<p><strong>Great job!</strong> Your GitHub account is configured, and you have successfully cloned the backend application code into your Cloud Shell. Next, we will set up the continuous integration pipeline using Cloud Build.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "content.code.annotate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
