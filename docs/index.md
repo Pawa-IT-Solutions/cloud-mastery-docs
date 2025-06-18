@@ -1,6 +1,6 @@
-# DevOps and Security Training Plan
+# Cloud Mastery Training
 
-Welcome to the DevOps & Security training session!
+Welcome to the Cloud Mastery Training session!
 
 This guide provides a complete, step-by-step walkthrough of the hands-on labs we will be covering. Please follow the sections in order to ensure your environment is set up correctly for subsequent steps.
 
