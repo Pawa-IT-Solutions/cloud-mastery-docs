@@ -2,8 +2,10 @@
 [How to Deploy a Static site using mkdocs & netlify](https://collabnix.com/how-to-deploy-a-static-site-using-mkdocs-and-netlify/)
 
 # Installation Steps
-brew install python
 ```bash
+# Install python if not already installed
+brew install python
+
 # Install mkdocs using Homebrew
 brew install mkdocs
 
@@ -25,6 +27,6 @@ pip install mkdocs mkdocs-windmill pymdown-extensions mkdocs-minify-plugin mkdoc
 
 # Running mkdocs locally
 mkdocs serve
-
-# Access the site at http://127.0.0.1:8000 or http://localhost:8000
 ```
+# Access the site at http://127.0.0.1:8000 or http://localhost:8000
+
