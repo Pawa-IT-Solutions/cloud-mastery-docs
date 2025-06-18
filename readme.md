@@ -28,5 +28,5 @@ pip install mkdocs mkdocs-windmill pymdown-extensions mkdocs-minify-plugin mkdoc
 # Running mkdocs locally
 mkdocs serve
 ```
-# Access the site at http://127.0.0.1:8000 or http://localhost:8000
+Access the site at http://127.0.0.1:8000 or http://localhost:8000
 
