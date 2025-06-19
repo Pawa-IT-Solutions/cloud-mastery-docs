@@ -25,6 +25,10 @@ This guide provides a complete, step-by-step walkthrough of the hands-on labs we
 ### 🚀 Deployment
 - [7. Access the Application](7-accessing-the-application.md)
 
+
+### 🤖 Virtual Agent Class
+- [7. Virtual Agent Class](8-virtual-agent-lab.md)
+
 ---
 
 ## ✅ Getting Started
