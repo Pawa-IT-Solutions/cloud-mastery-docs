@@ -1,107 +1,124 @@
-# 4. Setup Cloud Build for the Backend
+# 4. Automating Backend Deployments with Cloud Build
 
-Now that we have our source code in a GitHub repository, we'll set up a continuous integration (CI) pipeline using Google Cloud Build. This pipeline will automatically build and deploy our backend application to Cloud Run whenever we push changes to the repository.
+In this section, we'll harness the power of Google Cloud Build to create a Continuous Integration (CI) pipeline. This is a crucial step in modern software development.
 
-### Create a Cloud Build Trigger
+Once configured, this pipeline will automatically build and deploy our backend application to Cloud Run every time we push new code to our GitHub repository. No more manual deployments!
 
-1.  Navigate to the Google Cloud console. In the top search bar, type `Cloud Build` and select **Triggers** from the results.
+## Create a Cloud Build Trigger
 
+Let's start by creating the trigger that will listen for changes in our repository.
+
+1.  In the Google Cloud Console, use the top search bar to find `Cloud Build`, then select **Triggers** from the results.
     ![Search for Cloud Build](assets/images/cloud_build_search.png)
 
-2.  On the Triggers page, click **Create trigger**.
-
+2.  On the **Triggers** page, click **Create trigger**.
     ![Cloud Build Triggers Page](assets/images/cloud_build_triggers_page.png)
 
-### Configure the Trigger
+## Configure the Trigger
 
-1.  **Name**: Give your trigger a descriptive name (e.g., `cloud-mastery-backend-deploy`).
+Now, we'll configure the trigger to connect to our specific GitHub repository and run our deployment instructions.
+
+1.  **Name**: Give your trigger a descriptive name, like `cloud-mastery-backend-deploy`.
 2.  **Region**: Select `us-central1 (Iowa)`.
-3.  **Event**: Leave as `Push to a branch`.
-4.  **Source**:
-    *   **Repository**: Click **Connect new repository**.
-    ![Connect New Repository](assets/images/cloud_build_connect_repo.png)
-    *   Select **GitHub (Cloud Build GitHub App)** and click **Continue**.
-    *   Authorize Google Cloud Build to access your GitHub account.
-    ![Authorize GitHub Connection](assets/images/cloud_build_authorize_github.png)
-    *   On the GitHub page that opens, select **All repositories** and click **Install**. This allows Cloud Build to see your repos.
-    ![Install Google Cloud Build GitHub App](assets/images/cloud_build_install_github_app.png)
-    *   Back in the Cloud Build UI, select your forked `austinkaruru1/cloud-mastery-backend` repository.
-    *   Check the consent box and click **Connect**.
-    ![Select Repository for Trigger](assets/images/cloud_build_select_repo.png)
-5.  **Branch**: Enter `^master$` to trigger builds from the master branch.
-6.  **Configuration**:
+3.  **Event**: Keep the default setting, `Push to a branch`.
+4.  **Source - Connect your GitHub repository**:
+    1.  Next to **Repository**, click **Connect new repository**.
+        ![Connect New Repository](assets/images/cloud_build_connect_repo.png)
+    2.  Select **GitHub (Cloud Build GitHub App)** and click **Continue**.
+    3.  Authorize the Google Cloud Build app to access your GitHub account.
+        ![Authorize GitHub Connection](assets/images/cloud_build_authorize_github.png)
+    4.  On the GitHub installation page, select **All repositories** and click **Install**. This grants Cloud Build permission to see your repositories.
+        ![Install Google Cloud Build GitHub App](assets/images/cloud_build_install_github_app.png)
+    5.  Back in the Cloud Build console, select your forked `your-github-username/cloud-mastery-backend` repository from the dropdown.
+    6.  Check the consent box and click **Connect**.
+        ![Select Repository for Trigger](assets/images/cloud_build_select_repo.png)
+5.  **Source - Branch**: In the **Branch** field, enter `^master$`.
+
+    !!! info "What does `^master$` mean?"
+        This is a regular expression that ensures the trigger *only* runs for pushes made directly to the `master` branch, ignoring other branches.
+
+6.  **Configuration - Build Configuration**:
     *   **Type**: Select `Cloud Build configuration file (yaml or json)`.
-    *   **Location**: Leave as `Repository`. The default path `/cloudbuild.yaml` is correct.
-7.  **Advanced: Substitution Variables**:
-    *   We need to pass the database connection string as a secret to our build.
+    *   **Location**: Leave the default `Repository` setting. The path `/cloudbuild.yaml` points to the deployment instructions file already in your repository.
+7.  **Advanced - Substitution Variables**:
+    *   We need to securely provide our database password to the build process. We'll do this using a substitution variable.
     *   Click **Add variable**.
-    *   **Variable**: `_MYSQL_PRISMA_URL`
-    *   **Value**: This requires the public IP of your Cloud SQL instance. Open a **new tab** and navigate to the [Cloud SQL instances page](https://console.cloud.google.com/sql/instances). Copy the **Public IP address** of your instance.
-        ![Copy Cloud SQL Public IP Address](assets/images/sql_instance_public_ip.png)
-    *   Construct the connection string using the format below, replacing `<INSTANCE_IP_ADDRESS>` with the IP you just copied.
-    *   Also replace `<PROJECT-ID>` with your Google Cloud Project ID
+        *   **Variable**: `_MYSQL_PRISMA_URL`
+        *   **Value**: This is the full connection string for your database. To build it:
+            1.  Open a **new browser tab** and navigate to the [Cloud SQL instances page](https://console.cloud.google.com/sql/instances).
+            2.  Copy the **Public IP address** of your `cloud-mastery-sql` instance.
+                ![Copy Cloud SQL Public IP Address](assets/images/sql_instance_public_ip.png)
+            3.  Construct the connection string using the format below.
 
-        ````
-        mysql://student:<PROJECT-ID>@<INSTANCE_IP_ADDRESS>:3306/cloud_mastery?sslmode=require
-        ````
-        
-    *   Paste the complete string into the **Value** field for the `_MYSQL_PRISMA_URL` variable.
+    !!! warning "Action Required: Replace Placeholders"
+        You must replace the following placeholders in the string below:
+        *   `YOUR_PROJECT_ID`: Find this on your Google Cloud Console dashboard.
+        *   `YOUR_INSTANCE_PUBLIC_IP`: The public IP address you just copied.
+
+    ````
+    mysql://student:YOUR_PROJECT_ID@YOUR_INSTANCE_PUBLIC_IP:3306/cloud_mastery?sslmode=require
+    ````
+    *   Paste your completed and correct string into the **Value** field.
         ![Add Substitution Variables](assets/images/cloud_build_substitution_variables.png)
-8.  **Service Account**: In the "Advanced" section, find the Service Account dropdown and select the service account that starts with `cloud-mastery-`. This account has the necessary permissions.
 
-    ![Select Service Account](assets/images/cloud_build_select_service_account.png)
+8.  **Advanced - Service Account**:
+    *   Scroll down to the **Service Account** dropdown.
+    *   Select the service account that starts with `cloud-mastery-`. This special service account has the necessary permissions (like deploying to Cloud Run) to execute our pipeline.
+        ![Select Service Account](assets/images/cloud_build_select_service_account.png)
 
-9.  Click **Create** to finalize the trigger.
+9.  Click the **Create** button at the bottom of the page to save your trigger.
 
-### Make and push changes to Github to trigger Cloud Build Trigger Deployment
+## Triggering Your First Automated Deployment
 
-1. Now head to back to your Cloud Shell & select on the Pencil icon to open the Editor within Cloud Shell
+To trigger our pipeline, we need to push a new commit to our GitHub repository. We'll make a small, cosmetic change to do this.
+
+1.  In your Cloud Shell, click the **Open Editor** (pencil) icon in the top-right.
     ![Open Editor](assets/images/click-pencil-icon-open-editor.png)
-2. Select the File Icon, it looks like 2 A4 Pages
+2.  The editor will open. In the left-hand navigation pane, click the **Explorer** (two pages) icon, then click the **Open Folder** button.
     ![Select File icon](assets/images/select-file-after-opening-editor.png)
-3. Proceed to Click on `OPEN FOLDER`
     ![open folder](assets/images/click-open-folder.png)
-4. You should get a prompt to Open Folder, and select `OK`
+3.  A dialog will ask for confirmation. Click **OK** to open the `cloud-mastery-backend` project.
     ![OK to open folder](assets/images/select-ok-open-folder.png)
-5. The editor will now open your Cloud Mastery backend Folder.
-6. We can now proceed to make a change to our README.md file, so that we can push the changes to trigger the build.
-7. Select `README.md`
+4.  In the explorer, click on the `README.md` file to open it for editing.
     ![Select the readme file](assets/images/select-readme.png)
-8. You can make any change to any line that starts with `#`
-9. Once done, just go back to your Cloud shell, it should be at the bottom of the screen.
-10. Run the following commands in the specified sequence
+5.  Make any small change to the file, like adding a new line or fixing a typo. The content of the change doesn't matter.
+6.  Now, return to the main Cloud Shell terminal (the black window at the bottom).
+7.  Execute the following commands one by one to set up your Git identity, commit the file, and push it to GitHub.
+
+    !!! note "Use Your Training Git Identity"
+        Replace the placeholder email and name with the details provided for this training.
 
     ```bash
+    # Ensure you are in the correct directory
     cd ~/cloud-mastery-backend
+
+    # Configure your Git identity for this commit (one-time setup)
     git config --global user.email "firstname.lastname1@train.pawait.co.ke"
-    
     git config --global user.name "First Name Last Name"
-    
+
+    # Stage, commit, and push your change to trigger the build
     git add .
-    
-    git commit -m "initial commit"
-    
+    git commit -m "Trigger initial Cloud Build deployment"
     git push origin master
-    
     ```
-    
-11. Runnning these commands will setup your git identity within the cloudshell.
-12. You will proceed to add and the commit the changes you have made before pushing to your forked repository.
+    Your push to the `master` branch is the event that our Cloud Build trigger is waiting for!
     ![successful push to backend repo](assets/images/successful-push.png)
 
-13. Go  to the **History** page within Cloud Build. Click on the running build to view its progress.
+## Monitor the Build and Verify Deployment
 
+1.  Return to the Google Cloud Console and navigate to the Cloud Build **History** page. You'll see your build kick off automatically, listed with a "Running" status. Click on it to view the live logs.
     ![Cloud Build History](assets/images/cloud_build_history.png)
     ![Cloud Build in Progress](assets/images/cloud_build_in_progress.png)
 
-4.  The build will take approximately 7 minutes to complete. Once finished, you should see a "Successful" status.
-
+2.  Patience is a virtue! The build process will take about 7 minutes to complete as it builds the container image and deploys it to Cloud Run. Once done, you'll see a green "Successful" status.
     ![Cloud Build Successful](assets/images/cloud_build_success.png)
 
-5.  Navigate to **Cloud Run** in the console or use this link: [console.cloud.google.com/run](https://console.cloud.google.com/run). You should now see the `cloud-mastery-backend` service deployed and running.
-
+3.  Let's see the result! Navigate to **Cloud Run** in the console (or use this direct link: [console.cloud.google.com/run](https://console.cloud.google.com/run)). You'll now see your `cloud-mastery-backend` service listed with a green checkmark, indicating it's deployed and healthy.
     ![Cloud Run Backend Service](assets/images/cloud_run_backend.png)
 
 ---
 
-**Backend deployment successful!** You have now fully automated the build and deployment process for the backend application. In the next section, we'll repeat this process for the frontend.
+!!! success "Congratulations! Backend Automation Complete!"
+    You have successfully configured a professional Continuous Integration / Continuous Deployment (CI/CD) pipeline. From now on, every time you `git push` a change to the `master` branch, Cloud Build will automatically handle the deployment for you.
+
+    Next, we will apply these same principles to our frontend application.
