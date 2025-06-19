@@ -18,7 +18,7 @@ The Cloud Shell provides a command-line environment directly in your browser, wi
 
 1.  Open the Cloud Shell by clicking on the **Activate Cloud Shell** icon in the top-right corner of the console, as highlighted below.
 
-    ![Activate Cloud Shell Icon](assets/images/gcp_cloud_shell_icon.png)
+    ![Activate Cloud Shell Icon](assets/images/cloud_shell_open_in_new_window.png)
 
 2.  A new frame will open at the bottom of your window. Click **Continue** to proceed.
 

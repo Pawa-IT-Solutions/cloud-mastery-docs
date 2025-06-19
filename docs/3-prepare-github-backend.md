@@ -104,7 +104,7 @@ Now you can clone your forked repository.
     Replace the URL with your own forked repository SSH URL
 
     ```
-    git clone git@github.com:austinkaruru1/cloud-mastery-backend.git
+    git init && git clone git@github.com:austinkaruru1/cloud-mastery-backend.git
     ```
 
 3.  When prompted `Are you sure you want to continue connecting (yes/no/[fingerprint])?`, type `yes` and press `Enter`.

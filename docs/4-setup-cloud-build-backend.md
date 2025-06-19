@@ -39,28 +39,57 @@ Now that we have our source code in a GitHub repository, we'll set up a continuo
     *   **Value**: This requires the public IP of your Cloud SQL instance. Open a **new tab** and navigate to the [Cloud SQL instances page](https://console.cloud.google.com/sql/instances). Copy the **Public IP address** of your instance.
         ![Copy Cloud SQL Public IP Address](assets/images/sql_instance_public_ip.png)
     *   Construct the connection string using the format below, replacing `<INSTANCE_IP_ADDRESS>` with the IP you just copied.
-        ```
-        mysql://student:project-id@<INSTANCE_IP_ADDRESS>:3306/cloud_mastery?sslmode=require
-        ```
+    *   Also replace `<PROJECT-ID>` with your Google Cloud Project ID
+
+        ````
+        mysql://student:<PROJECT-ID>@<INSTANCE_IP_ADDRESS>:3306/cloud_mastery?sslmode=require
+        ````
+        
     *   Paste the complete string into the **Value** field for the `_MYSQL_PRISMA_URL` variable.
         ![Add Substitution Variables](assets/images/cloud_build_substitution_variables.png)
-8.  **Service Account**: In the "Advanced" section, find the Service Account dropdown and select the service account that starts with `terraform-`. This account has the necessary permissions.
+8.  **Service Account**: In the "Advanced" section, find the Service Account dropdown and select the service account that starts with `cloud-mastery-`. This account has the necessary permissions.
 
     ![Select Service Account](assets/images/cloud_build_select_service_account.png)
 
 9.  Click **Create** to finalize the trigger.
 
-### Run the Trigger and Verify Deployment
+### Make and push changes to Github to trigger Cloud Build Trigger Deployment
 
-1.  You will be taken back to the Triggers list. Find your new trigger and click **Run**.
+1. Now head to back to your Cloud Shell & select on the Pencil icon to open the Editor within Cloud Shell
+    ![Open Editor](assets/images/click-pencil-icon-open-editor.png)
+2. Select the File Icon, it looks like 2 A4 Pages
+    ![Select File icon](assets/images/select-file-after-opening-editor.png)
+3. Proceed to Click on `OPEN FOLDER`
+    ![open folder](assets/images/click-open-folder.png)
+4. You should get a prompt to Open Folder, and select `OK`
+    ![OK to open folder](assets/images/select-ok-open-folder.png)
+5. The editor will now open your Cloud Mastery backend Folder.
+6. We can now proceed to make a change to our README.md file, so that we can push the changes to trigger the build.
+7. Select `README.md`
+    ![Select the readme file](assets/images/select-readme.png)
+8. You can make any change to any line that starts with `#`
+9. Once done, just go back to your Cloud shell, it should be at the bottom of the screen.
+10. Run the following commands in the specified sequence
 
-    ![Run the Trigger](assets/images/cloud_build_run_trigger.png)
+    ```bash
+    cd ~/cloud-mastery-backend
+    git config --global user.email "firstname.lastname1@train.pawait.co.ke"
+    
+    git config --global user.name "First Name Last Name"
+    
+    git add .
+    
+    git commit -m "initial commit"
+    
+    git push origin master
+    
+    ```
+    
+11. Runnning these commands will setup your git identity within the cloudshell.
+12. You will proceed to add and the commit the changes you have made before pushing to your forked repository.
+    ![successful push to backend repo](assets/images/successful-push.png)
 
-2.  A popup will appear. Confirm the branch is `master` and click **Run trigger**.
-
-    ![Confirm Run Trigger Popup](assets/images/cloud_build_run_trigger_popup.png)
-
-3.  You will be redirected to the **History** page. Click on the running build to view its progress.
+13. Go  to the **History** page within Cloud Build. Click on the running build to view its progress.
 
     ![Cloud Build History](assets/images/cloud_build_history.png)
     ![Cloud Build in Progress](assets/images/cloud_build_in_progress.png)
