@@ -24,4 +24,4 @@ jobs:
           pip install mkdocs mkdocs-material
 
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --remote-branch master
+        run: mkdocs gh-deploy --force
