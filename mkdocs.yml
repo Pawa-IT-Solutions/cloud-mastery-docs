@@ -23,6 +23,7 @@ extra_css:
   - assets/css/extra.css
 
 nav:
+
   - Introduction: index.md
   - GCP Setup:
       - '1. Prepare GCP Environment': 1-prepare-gcp-environment.md
@@ -35,6 +36,8 @@ nav:
       - '6. Setup Cloud Build for Frontend': 6-setup-cloud-build-frontend.md
   - Deployment:
       - '7. Access the Application': 7-accessing-the-application.md
+  - Virtual Agent Class:
+      - '8. Virtual Agent Class': virtual-agent-lab.md
 
 extra: 
   generator: false  # Disable the generator tag in the HTML head
