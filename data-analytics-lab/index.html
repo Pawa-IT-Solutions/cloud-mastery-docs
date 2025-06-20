@@ -1,0 +1,1893 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive training guide for Cloud Mastery covering DevOps and Virtual Agents.">
+      
+      
+        <meta name="author" content="Pawa IT Solutions">
+      
+      
+        <link rel="canonical" href="https://docs.cloudpartner.africa/data-analytics-lab/">
+      
+      
+        <link rel="prev" href="../accessing-the-application/">
+      
+      
+        <link rel="next" href="../virtual-agent-lab/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Data Analytics & Visualization - Pawa IT Cloud Mastery Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gcp-data-pipeline-mysql-to-bigquery-to-looker-studio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Pawa IT Cloud Mastery Training" class="md-header__button md-logo" aria-label="Pawa IT Cloud Mastery Training" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pawa IT Cloud Mastery Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Analytics & Visualization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  
+  Introduction
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../gcp-migration-lab/" class="md-tabs__link">
+          
+  
+  
+  GCP Migration Lab
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../devops-lab/" class="md-tabs__link">
+          
+  
+  
+  Automate Securely
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Data to Dashboards
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../virtual-agent-lab/" class="md-tabs__link">
+          
+  
+  
+  Build Your Agent
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../end-of-training/" class="md-tabs__link">
+          
+  
+  
+  End of Training
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Pawa IT Cloud Mastery Training" class="md-nav__button md-logo" aria-label="Pawa IT Cloud Mastery Training" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Pawa IT Cloud Mastery Training
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud Mastery Training Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    GCP Migration Lab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            GCP Migration Lab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcp-migration-lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prepare GCP Environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Automate Securely
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Automate Securely
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devops-lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevOps & CI/CD on GCP Lab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-cloud-sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-backend-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Backend Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-backend-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Backend Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-frontend-repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Frontend Repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-frontend-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Cloud Build for Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accessing-the-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Access the Application
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data to Dashboards
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Data to Dashboards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Data Analytics & Visualization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Analytics & Visualization
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-creating-the-bigquery-dataset-and-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Creating the BigQuery Dataset and Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1: Creating the BigQuery Dataset and Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-bigquery-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create a BigQuery Dataset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-creating-a-bigquery-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Creating a BigQuery Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-creating-the-cloud-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Creating the Cloud Function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Creating the Cloud Function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-prepare-your-code-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Prepare Your Code Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-navigate-to-cloud-run-functions-for-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Navigate to Cloud Run functions (for Functions)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-the-cloud-run-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create the Cloud Run Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-configure-the-function-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Configure the Function Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-configure-code-and-runtime-inline-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Configure Code and Runtime (Inline Editor)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-creating-the-cloud-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Creating the Cloud Scheduler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3: Creating the Cloud Scheduler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-navigate-to-cloud-scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Navigate to Cloud Scheduler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-the-scheduler-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Create the Scheduler Job
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-and-verify-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test and Verify the Job
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-setting-up-looker-studio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Setting up Looker Studio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4: Setting up Looker Studio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-1-make-a-copy-of-the-dashboard-link-it-to-bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: Make a Copy of the Dashboard &amp; Link it to BigQuery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-add-a-calculated-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Add a Calculated Field
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-add-a-new-chart-using-the-calculated-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Add a New Chart Using the Calculated Field
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Build Your Agent
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Build Your Agent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtual-agent-lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building Virtual Agent with Dialogflow CX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    End of Training
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            End of Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../end-of-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    End of Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gcp-data-pipeline-mysql-to-bigquery-to-looker-studio">GCP Data Pipeline: MySQL to BigQuery to Looker Studio<a class="headerlink" href="#gcp-data-pipeline-mysql-to-bigquery-to-looker-studio" title="Permanent link">&para;</a></h1>
+<p>This guide walks you through creating a data pipeline that extracts data from a MySQL database, transforms and loads it into BigQuery using a Cloud Run function, schedules this process with Cloud Scheduler, and finally visualizes the data in Looker Studio.</p>
+<h2 id="part-1-creating-the-bigquery-dataset-and-table">Part 1: Creating the BigQuery Dataset and Table<a class="headerlink" href="#part-1-creating-the-bigquery-dataset-and-table" title="Permanent link">&para;</a></h2>
+<p>A Dataset in BigQuery is like a database or a schema; it's a container for your tables. A Table contains your actual data, organized into rows and columns with a defined schema.</p>
+<h3 id="step-1-create-a-bigquery-dataset">Step 1: Create a BigQuery Dataset<a class="headerlink" href="#step-1-create-a-bigquery-dataset" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Navigate to BigQuery:</strong></p>
+<ul>
+<li>In the Google Cloud Console, open the navigation menu (☰).</li>
+<li>Scroll down to the <strong>BigQuery</strong> section and click on <strong>Studio</strong>.</li>
+</ul>
+<p><img alt="Navigate to BigQuery Studio" src="../assets/images/access-bq.png" /></p>
+</li>
+<li>
+<p><strong>Select Your Project:</strong></p>
+<ul>
+<li>In the <strong>Explorer</strong> panel on the left, find and click on your Google Cloud project name.</li>
+</ul>
+</li>
+<li>
+<p><strong>Initiate Dataset Creation:</strong></p>
+<ul>
+<li>Click the three-dot menu (⋮) next to your project ID.</li>
+<li>Select <strong>Create dataset</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure the Dataset:</strong></p>
+<ul>
+<li><strong>Dataset ID:</strong> Enter a unique name for your dataset. This name will be part of your table IDs (e.g., <code>cloud_mastery</code>).</li>
+<li><strong>Data location:</strong> Select the geographic location where your data will be stored (e.g., <code>us-central1</code> for a region or <code>US</code> for a multi-region).
+    !!! important
+        You cannot change the location after creation. Choose a location close to your other services (like your Cloud Function) to optimize performance and cost.</li>
+<li>Leave other settings as default for now. Click the <strong>CREATE DATASET</strong> button.
+    Your new dataset will now appear under your project in the Explorer panel.</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-2-creating-a-bigquery-table">Step 2: Creating a BigQuery Table<a class="headerlink" href="#step-2-creating-a-bigquery-table" title="Permanent link">&para;</a></h3>
+<p>Now that you have a dataset, you can create a table inside it using the Console Interface (Visual Builder) to create an empty table where you will load data later.</p>
+<ol>
+<li>
+<p><strong>Select Your Dataset:</strong></p>
+<ul>
+<li>In the <strong>Explorer</strong> panel, find the dataset you just created (e.g., <code>cloud_mastery</code>).</li>
+<li>Click the three-dot menu (⋮) next to your dataset name.</li>
+<li>Select <strong>Create table</strong>.</li>
+</ul>
+<p><img alt="Create BigQuery Table Menu" src="../assets/images/create-table.png" /></p>
+</li>
+<li>
+<p><strong>Configure the Table:</strong>
+    This will open the "Create table" configuration page.</p>
+<ul>
+<li><strong>Source:</strong> For "Create table from", keep the default <strong>Empty table</strong>.</li>
+<li>
+<p><strong>Destination:</strong></p>
+<ul>
+<li>Project and Dataset will be pre-filled.</li>
+<li><strong>Table name:</strong> Enter a name for your table (e.g., <code>denormalized_orders</code>).</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>CREATE TABLE</strong>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Your new empty table will now appear under its dataset. To view your table name, click on your <strong>table name</strong> in your dataset on the left panel, then click on <strong>Details</strong> at the top. Finally, copy your <strong>Table ID</strong> to be used in the next session.</p>
+<p><img alt="Configure BigQuery Table Details" src="../assets/images/denormalized-orders.png" /></p>
+<h2 id="part-2-creating-the-cloud-function">Part 2: Creating the Cloud Function<a class="headerlink" href="#part-2-creating-the-cloud-function" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>Before you begin, ensure you have the following ready:</p>
+<ol>
+<li><strong>Google Cloud Project:</strong> A project with billing enabled.</li>
+<li><strong>Enabled APIs:</strong> Make sure the following APIs are enabled in your project. You can enable them by searching for them in the console's search bar and clicking "Enable".<ul>
+<li>Cloud Functions API</li>
+<li>Cloud Build API</li>
+<li>Artifact Registry API</li>
+<li>BigQuery API</li>
+</ul>
+</li>
+<li><strong>Source MySQL Database:</strong> This guide will focus on connecting to a Cloud SQL instance. The credentials will be provided to you.<ul>
+<li><code>DB_USER</code>: <code>student</code></li>
+<li><code>DB_PASS</code>: your project name (e.g. <code>john-doe-pawait-1</code>)</li>
+<li><code>DB_NAME</code>: <code>cloud_mastery</code></li>
+<li><code>DB_HOST</code>: your cloudsql instance public ip (e.g. <code>34.136.216.83</code>)</li>
+</ul>
+</li>
+<li><strong>BigQuery Table:</strong> You need an existing BigQuery Dataset and table where the pipeline will load the data from our first step.<ul>
+<li><code>BQ_TABLE_ID</code>: <code>your-project-id.your_dataset_name.your_table_name</code> (e.g., <code>john-higi-pawait-1.john_higi_pawait_1.cloud_mastery</code>)</li>
+</ul>
+</li>
+</ol>
+<h3 id="step-1-prepare-your-code-files">Step 1: Prepare Your Code Files<a class="headerlink" href="#step-1-prepare-your-code-files" title="Permanent link">&para;</a></h3>
+<p>Your Cloud Function needs two files: <code>main.py</code> (our function's logic) and <code>requirements.txt</code> (its dependencies).</p>
+<ol>
+<li>
+<p><strong><code>main.py</code></strong></p>
+<ul>
+<li>Copy the code snippet and paste it in the <code>main.py</code> file.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">main</span><span class="o">.</span><span class="n">py</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pymysql</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.cloud</span><span class="w"> </span><span class="kn">import</span> <span class="n">bigquery</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">denormalize_and_load</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">db_user</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">db_pass</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DB_PASS&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">db_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">db_host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">table_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;BQ_TABLE_ID&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s2">    SELECT</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="s2">        o.id AS order_id,</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s2">        o.orderNumber,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s2">        CONCAT(c.firstName, &#39; &#39;, c.lastName) AS customer_name,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="s2">        c.email,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="s2">        o.orderDate,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="s2">        od.product_id,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="s2">        p.name AS product_name,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="s2">        p.category,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="s2">        od.quantity,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="s2">        od.unitCost,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="s2">        od.totalCost,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="s2">        o.status,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="s2">        o.paymentMethod</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="s2">    FROM orders o</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="s2">    JOIN customers c ON o.customer_id = c.id</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="s2">    JOIN order_details od ON o.id = od.order_id</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="s2">    JOIN products p ON od.product_id = p.id</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="n">connection</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        <span class="n">host</span><span class="o">=</span><span class="n">db_host</span><span class="p">,</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        <span class="n">user</span><span class="o">=</span><span class="n">db_user</span><span class="p">,</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        <span class="n">password</span><span class="o">=</span><span class="n">db_pass</span><span class="p">,</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        <span class="n">database</span><span class="o">=</span><span class="n">db_name</span><span class="p">,</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>        <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        <span class="n">cursorclass</span><span class="o">=</span><span class="n">pymysql</span><span class="o">.</span><span class="n">cursors</span><span class="o">.</span><span class="n">DictCursor</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="p">)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="k">with</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cursor</span><span class="p">:</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>            <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>    <span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>        <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>    <span class="c1"># Explicitly cast date/time columns if necessary, BigQuery auto-detects often</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    <span class="k">if</span> <span class="s1">&#39;orderDate&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;orderDate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;orderDate&#39;</span><span class="p">])</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    <span class="n">client</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    <span class="n">job_config</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">LoadJobConfig</span><span class="p">(</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>        <span class="n">write_disposition</span><span class="o">=</span><span class="n">bigquery</span><span class="o">.</span><span class="n">WriteDisposition</span><span class="o">.</span><span class="n">WRITE_TRUNCATE</span><span class="p">,</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>        <span class="n">autodetect</span><span class="o">=</span><span class="kc">True</span> <span class="c1"># Set to False if you want to provide a schema</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    <span class="p">)</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    <span class="n">job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">load_table_from_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">table_id</span><span class="p">,</span> <span class="n">job_config</span><span class="o">=</span><span class="n">job_config</span><span class="p">)</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    <span class="n">job</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>  <span class="c1"># Wait for the job to complete</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows to </span><span class="si">{</span><span class="n">table_id</span><span class="si">}</span><span class="s2">.&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong><code>requirements.txt</code></strong></p>
+<ul>
+<li>This file lists the Python libraries your function needs. Copy the code snippet and paste it in the <code>requirements.txt</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>functions-framework==3.*
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pandas==2.2.2
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>PyMySQL==1.1.0
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>google-cloud-bigquery==3.21.0
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># SQLAlchemy and pyarrow might not be strictly needed for this specific script
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># but were in the original requirements. Add if other parts of your code use them.
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a># SQLAlchemy==2.0.30
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a># pyarrow==20.0.0
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The code will also be available to you in the cloud mastery github repo (link should be provided here).</p>
+</div>
+</li>
+</ol>
+<h3 id="step-2-navigate-to-cloud-run-functions-for-functions">Step 2: Navigate to Cloud Run functions (for Functions)<a class="headerlink" href="#step-2-navigate-to-cloud-run-functions-for-functions" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the Google Cloud Console, search for "cloud run functions".</p>
+<p><img alt="Search for Cloud Run functions" src="../assets/images/cloud-run-functions.png" /></p>
+</li>
+</ol>
+<h3 id="step-3-create-the-cloud-run-function">Step 3: Create the Cloud Run Function<a class="headerlink" href="#step-3-create-the-cloud-run-function" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Click on <strong>[...] Write a function</strong> at the top of the page.</p>
+<p><img alt="Click Write a function" src="../assets/images/write-a-function.png" /></p>
+</li>
+<li>
+<p>You will be taken to the function configuration page.
+   <img alt="Function Configuration page" src="../assets/images/function-create-service.png" /></p>
+</li>
+</ol>
+<h3 id="step-4-configure-the-function-basics">Step 4: Configure the Function Basics<a class="headerlink" href="#step-4-configure-the-function-basics" title="Permanent link">&para;</a></h3>
+<p>Fill out the first section with the following details and leave default for those not included in the list below:</p>
+<ul>
+<li>Leave the default <strong>Use an inline editor to create a function</strong> option selected.</li>
+<li><strong>Service name:</strong> Give your function a descriptive name (e.g., <code>cloud-mastery</code>). Service name may only start with a letter and contain up to 49 lowercase letters, numbers, or hyphens.</li>
+<li><strong>Region:</strong> <code>us-central1</code> (Iowa) (or your preferred region, matching BigQuery dataset is good).</li>
+<li>Select <strong>Source code inline</strong> if not already selected.</li>
+<li><strong>Runtime:</strong> Python 3.13 (or your preferred compatible Python version, e.g., 3.9, 3.10, 3.11, 3.12).</li>
+<li>
+<p><strong>Authentication:</strong> For easy testing, select <strong>Allow unauthenticated invocations</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Security Warning</p>
+<p>For a production environment, you should always use "Require authentication" and set up a secure way to call the function (e.g., using Cloud Scheduler with an OIDC token).</p>
+</div>
+</li>
+<li>
+<p>Expand the <strong>Containers, Volumes, Networking, Security</strong> section.</p>
+</li>
+<li>Select the <strong>Containers</strong> tab if not already selected.</li>
+<li>Under <strong>Build configuration</strong>, ensure <strong>Source code</strong> is set to <strong>Source code inline</strong>.</li>
+<li>
+<p>Scroll down to <strong>Runtime Environment Variables</strong> under "Container(s) &gt; Edit Container". Click on <strong>Variables &amp; Secrets</strong>.</p>
+<p><strong>Runtime Environment Variables:</strong>
+*   Click <strong>ADD VARIABLE</strong>. You will add a variable for each piece of configuration your code needs.
+    *   <code>DB_USER</code>: Your MySQL database username (e.g., <code>student</code>)
+    *   <code>DB_PASS</code>: Your MySQL database password (e.g., <code>john-doe-pawait-1</code>). Note: For production, it is highly recommended to use Secret Manager.
+    *   <code>DB_NAME</code>: The name of your MySQL database (e.g., <code>cloud_mastery</code>)
+    *   <code>DB_HOST</code>: The public IP address of your Cloud SQL instance.
+    *   <code>BQ_TABLE_ID</code>: The full ID for your BigQuery table in the format <code>your-project-id.your_dataset_name.your_table_name</code>.</p>
+<p><img alt="Environment Variables Part" src="../assets/images/env-var.png" /></p>
+</li>
+<li>
+<p>Click on the <strong>Security</strong> tab (within "Containers, Volumes, Networking, Security").</p>
+</li>
+<li>
+<p><strong>Service account:</strong> Select the provided Service account (e.g., <code>Infra - SA - john-higi-1</code>). </p>
+<p><img alt="Configure Service Account" src="../assets/images/sa-account.png" /></p>
+</li>
+<li>
+<p>Leave the rest as default and click  Create</p>
+</li>
+</ul>
+<h3 id="step-5-configure-code-and-runtime-inline-editor">Step 5: Configure Code and Runtime (Inline Editor)<a class="headerlink" href="#step-5-configure-code-and-runtime-inline-editor" title="Permanent link">&para;</a></h3>
+<p>This is where you'll provide your code and define the environment.</p>
+<ol>
+<li>
+<p><strong>Provide the Code:</strong></p>
+<ul>
+<li>In the <code>main.py</code> tab, paste the full Python code from Step 1.</li>
+<li>Click on the <code>requirements.txt</code> tab and paste the dependencies.</li>
+</ul>
+<p><img alt="Source Editor for main.py and requirements.txt" src="../assets/images/inline-editor.png" /></p>
+</li>
+<li>
+<p><strong>Function entry point:</strong> This must match the name of the function in your Python code. Enter <code>denormalize_and_load</code>.</p>
+</li>
+<li>
+<p>Click <strong>Save and redeploy</strong> (or similar button like "Deploy").</p>
+</li>
+<li>
+<p>Deployment will take a few minutes. You can monitor the progress. Once completed and deployed successfully, you should get all Green checks and a URL provided for your function. Clicking on this URL will trigger the function.</p>
+<p><img alt="Deployment Status - Creating Revision" src="../assets/images/deploying-revision.png" /></p>
+<p>You can test the function by navigating to its URL in a browser or using a tool like <code>curl</code>.</p>
+</li>
+</ol>
+<h2 id="part-3-creating-the-cloud-scheduler">Part 3: Creating the Cloud Scheduler<a class="headerlink" href="#part-3-creating-the-cloud-scheduler" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Deployed Cloud Function:</strong> Your function must be deployed and working correctly when tested manually.</li>
+<li><strong>Cloud Scheduler API Enabled:</strong> Ensure the Cloud Scheduler API is enabled in your project.</li>
+</ol>
+<h3 id="step-1-navigate-to-cloud-scheduler">Step 1: Navigate to Cloud Scheduler<a class="headerlink" href="#step-1-navigate-to-cloud-scheduler" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the Google Cloud Console, search for "cloud scheduler" OR open the navigation menu (≡), scroll down to the <strong>Tools</strong> section (or it might be under "Serverless" or "Integration Services") and click on <strong>Cloud Scheduler</strong>.</p>
+<p><img alt="Search for Cloud Scheduler" src="../assets/images/create-cloud-scheduler.png" /></p>
+</li>
+</ol>
+<h3 id="step-2-create-the-scheduler-job">Step 2: Create the Scheduler Job<a class="headerlink" href="#step-2-create-the-scheduler-job" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>+ CREATE JOB</strong> button to fill in the configuration details.</p>
+<p><img alt="Create Cloud Scheduler Job Page" src="../assets/images/define-schedule.png" /></p>
+<ol>
+<li>
+<p><strong>Define the job:</strong></p>
+<ul>
+<li><strong>Name:</strong> Give the job a descriptive name, like <code>mysql-to-bq-etl-5min</code>.</li>
+<li><strong>Region:</strong> Select the <strong>same region</strong> as your Cloud Function. This minimizes latency and cost.</li>
+<li><strong>Description:</strong> (Optional but recommended) Add a short note about what the job does, e.g., "Runs the MySQL to BigQuery ETL function every 5 minutes."</li>
+</ul>
+</li>
+<li>
+<p><strong>Define the frequency:</strong></p>
+<ul>
+<li><strong>Frequency:</strong> Enter the schedule using cron syntax. For "every 5 minutes," use: <code>*/5 * * * *</code></li>
+<li><strong>Timezone:</strong> Select your desired timezone (e.g., East Africa Time (EAT) or UTC).</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure the execution:</strong>
+    This is the most important part, where you tell the scheduler what to run.</p>
+<ul>
+<li><strong>Target type:</strong> Select <strong>HTTP</strong>.</li>
+<li><strong>URL:</strong> Paste the Cloud Function Trigger URL you copied after deploying the cloud function (e.g. <code>https://cloud-mastery-1028511169025.us-central1.run.app</code>).</li>
+<li><strong>HTTP method:</strong> Select <strong>POST</strong>. (While GET often works for simple triggers, POST is more conventional for requesting an action, especially if your function might expect a body in the future).</li>
+<li><strong>Auth header:</strong> If you configured your Cloud Function to "Require authentication", select <strong>Add OIDC token</strong>.<ul>
+<li><strong>Service account:</strong> Select the service account that has permission to invoke the Cloud Run function (e.g., a service account with "Cloud Run Invoker" role for that specific function).</li>
+<li><strong>Audience:</strong> If not auto-filled, this is usually the same as the function's trigger URL.</li>
+</ul>
+</li>
+<li>If you selected "Allow unauthenticated invocations" for the function, set Auth header to <strong>None</strong>.</li>
+</ul>
+</li>
+</ol>
+<p>Finally, click <strong>CREATE</strong>.</p>
+<h3 id="step-3-test-and-verify-the-job">Step 3: Test and Verify the Job<a class="headerlink" href="#step-3-test-and-verify-the-job" title="Permanent link">&para;</a></h3>
+<p>You don't have to wait 5 minutes to see if it works. You can force an immediate run.</p>
+<ol>
+<li>You will be returned to the Cloud Scheduler dashboard.</li>
+<li>Find your newly created job in the list.</li>
+<li>On the far right, click the <strong>three-dot menu (⋮)</strong> and select <strong>Force run</strong>.</li>
+</ol>
+<p><strong>How to check if it worked:</strong></p>
+<ol>
+<li><strong>Check the Scheduler Log:</strong> In the job list, look at the <strong>Result</strong> column. It should change from "Never run" to "Success" within a few seconds. If it says "Failed," click on the job and then the <strong>LOGS</strong> tab to see the error (a common error is 403 PERMISSION_DENIED, which usually means the service account permissions are missing or the Audience for OIDC token is incorrect).</li>
+<li><strong>Check the Cloud Function Log:</strong><ul>
+<li>Navigate back to your Cloud Function's details page in Cloud Run.</li>
+<li>Go to the <strong>LOGS</strong> tab.</li>
+<li>You should see new log entries showing that the function started and completed successfully, including your print() message (e.g., <code>Loaded X rows...</code>).</li>
+</ul>
+</li>
+<li><strong>Check BigQuery:</strong><ul>
+<li>Navigate to the BigQuery console and check your table. The "Last modified" time should reflect the time you forced the run, and the data should be present.</li>
+</ul>
+</li>
+</ol>
+<h2 id="part-4-setting-up-looker-studio">Part 4: Setting up Looker Studio<a class="headerlink" href="#part-4-setting-up-looker-studio" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites_2">Prerequisites<a class="headerlink" href="#prerequisites_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Looker Studio Account:</strong> You need to have access to Looker Studio (<a href="https://lookerstudio.google.com">lookerstudio.google.com</a>).</li>
+<li><strong>Existing BigQuery Table:</strong> Your <code>denormalized_orders</code> table (or similar) must exist in BigQuery and contain data.</li>
+<li><strong>An Existing Dashboard to Copy:</strong> You need a dashboard to use as a template. For our session, we will use the dashboard embedded on the app. (e.g., a shared template link: <code>Cloud mastery dashboard</code>).</li>
+</ol>
+<h3 id="part-1-make-a-copy-of-the-dashboard-link-it-to-bigquery">Part 1: Make a Copy of the Dashboard &amp; Link it to BigQuery<a class="headerlink" href="#part-1-make-a-copy-of-the-dashboard-link-it-to-bigquery" title="Permanent link">&para;</a></h3>
+<p>This process combines copying the report and connecting it to your new data source in one flow.</p>
+<ol>
+<li><strong>Open the Dashboard:</strong> Navigate to the Looker Studio report you want to copy.</li>
+<li>
+<p><strong>Make a Copy:</strong></p>
+<ul>
+<li>In the top-right corner, click the <strong>three-dot menu (⋮)</strong>.</li>
+<li>Select <strong>Make a copy</strong>.</li>
+</ul>
+<p><img alt="Looker Studio - Make a copy" src="../assets/images/looker-copy.png" /></p>
+</li>
+<li>
+<p><strong>Configure the New Data Source:</strong></p>
+<ul>
+<li>A new window titled "Copy this report" will appear. This is the most important step. It shows the report's original data sources and prompts you to choose a new one.</li>
+<li>Under the <strong>New Data Source</strong> column, click on the current data source to change it.</li>
+<li>A panel will open to select a data source. At the bottom, click <strong>CREATE DATA SOURCE</strong>.</li>
+</ul>
+<p><img alt="Copy Report - Select New Data Source" src="../assets/images/create-data-source.png" /></p>
+</li>
+<li>
+<p><strong>Connect to BigQuery:</strong></p>
+<ul>
+<li>In the list of Google Connectors, select <strong>BigQuery</strong>.</li>
+</ul>
+<p><img alt="Select BigQuery Connector" src="../assets/images/connect-to-bq.png" /></p>
+<ul>
+<li>Your projects will be listed. Select the project containing your data (e.g., <code>pawa0Alpha</code> or your project).</li>
+<li>Next, select the <strong>Dataset</strong> you created (e.g., <code>pawait_demos</code> or your <code>cloud_mastery</code> dataset).</li>
+<li>Finally, select the <strong>Table</strong> (e.g., <code>cloud_mastery</code> if that's your table name, or <code>denormalized_orders</code>).</li>
+<li>Click the blue <strong>CONNECT</strong> button in the top-right corner.</li>
+</ul>
+<p><img alt="Connect to BigQuery Table" src="../assets/images/click-connect.png" /></p>
+</li>
+<li>
+<p><strong>Confirm the Schema:</strong></p>
+<ul>
+<li>Looker Studio will now show you all the fields (columns) from your BigQuery table and its best guess for their data types (e.g., Number, Text, Date &amp; Time). It's usually very accurate.</li>
+<li>Click <strong>ADD TO REPORT</strong> in the top-right corner. (Image for this step is missing, but it's a standard Looker Studio UI element after connecting a data source).
+<img alt="Add to report" src="../assets/images/add-to-report.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Finalize the Copy:</strong></p>
+<ul>
+<li>You will be back at the "Copy this report" window. Your new BigQuery table should now be listed as the <strong>New Data Source</strong>.</li>
+<li>Click <strong>COPY REPORT</strong>.</li>
+</ul>
+<p><strong>What just happened?</strong> Looker Studio has created a new copy of the dashboard. All the charts will now try to get their data from your <code>denormalized_orders</code> table.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the field names in your new table don't match the field names used by the original charts, some charts may appear "broken." You'll need to click on each broken chart and manually select the correct fields from your new data source in the <strong>Setup</strong> panel on the right.</p>
+</div>
+<p><img alt="Copy of dashboard" src="../assets/images/copy-of-dashboard.png" /></p>
+</li>
+</ol>
+<h3 id="part-2-add-a-calculated-field">Part 2: Add a Calculated Field<a class="headerlink" href="#part-2-add-a-calculated-field" title="Permanent link">&para;</a></h3>
+<p>Let's create a useful new field without changing our BigQuery table. We'll create a new field called <code>Order Status Group</code> that simplifies the status into "Completed," "In Progress," or "Other."
+    <img alt="Order Status New" src="../assets/images/new-order.png" /></p>
+<ol>
+<li>
+<p><strong>Access the Data Source:</strong></p>
+<ul>
+<li>In the menu at the top of your new report, go to <strong>Resource &gt; Manage added data sources</strong>.</li>
+<li>Find your <code>denormalized_orders</code> data source in the list and click <strong>EDIT</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create the New Field:</strong></p>
+<ul>
+<li>In the data source editor view, click the blue <strong>+ ADD A FIELD</strong> button in the top-left.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure the Calculated Field:</strong></p>
+<ul>
+<li>
+<p>A new screen will open. Fill in the details:</p>
+<ul>
+<li><strong>Field Name:</strong> Type <code>Order Status Group</code>.</li>
+<li><strong>Formula:</strong> Enter a CASE statement to define the logic. This formula is case-sensitive and must match the values in your status column.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- This formula groups detailed statuses into broader categories.</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">CASE</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Delivered&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Completed&#39;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Shipped&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;Completed&#39;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Processing&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;In Progress&#39;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Pending&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;In Progress&#39;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;Other&#39;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">END</span>
+</code></pre></div>
+    <img alt="Categories" src="../assets/images/categories.png" />
+    *   Looker Studio will show a green checkmark once the formula syntax is valid.
+    *   Click <strong>SAVE</strong> in the bottom-right corner.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Return to the Report:</strong></p>
+<ul>
+<li>Click <strong>DONE</strong> in the top-right corner of the data source editor to go back to your report canvas.</li>
+<li>Your new field, <code>Order Status Group</code>, is now available to use in any chart.</li>
+</ul>
+</li>
+</ol>
+<h3 id="part-3-add-a-new-chart-using-the-calculated-field">Part 3: Add a New Chart Using the Calculated Field<a class="headerlink" href="#part-3-add-a-new-chart-using-the-calculated-field" title="Permanent link">&para;</a></h3>
+<p>Let's visualize the breakdown of our new status groups with a pie chart.</p>
+<ol>
+<li>
+<p><strong>Add a Chart to the Canvas:</strong></p>
+<ul>
+<li>In the top menu, click <strong>Add a chart</strong>.</li>
+<li>Select <strong>Pie chart</strong> from the dropdown.</li>
+<li>Your cursor will turn into a crosshair. Click anywhere on your report canvas to drop the new chart.
+<img alt="Add a chart" src="../assets/images/add-new-chart.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Configure the Chart's Data:</strong></p>
+<ul>
+<li>Click on your new pie chart to select it. The <strong>Chart &gt; Setup</strong> panel will appear on the right.</li>
+<li><strong>Data source:</strong> Make sure your <code>denormalized_orders</code> source is selected.</li>
+<li><strong>Dimension:</strong> This is what slices up the pie.<ul>
+<li>Drag your new <strong>Order Status Group</strong> field from the "Available Fields" list on the right and drop it into the "Dimension" box.</li>
+</ul>
+</li>
+<li><strong>Metric:</strong> This is what determines the size of each slice.<ul>
+<li>Drag the <strong>order_id</strong> field (or any unique row identifier like <code>Record Count</code>) into the "Metric" box. By default, if using <code>order_id</code>, it might sum or count. Ensure it's set to <strong>Count Distinct (CTD)</strong> for unique orders, or <strong>Record Count</strong> if you want to count all rows per status group.
+<img alt="Configure New chart" src="../assets/images/config-new-chart.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Style the Chart (Optional):</strong></p>
+<ul>
+<li>With the chart still selected, click the <strong>Style</strong> tab in the right-hand panel.</li>
+<li>Here you can change colors, add a title, change the font, and choose whether to show percentages or values on the slices.
+<img alt="Style your chart" src="../assets/images/style-the-chart.png" /></li>
+</ul>
+</li>
+</ol>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>You have now successfully copied a dashboard, connected it to your own BigQuery data, enriched it with a custom calculated field, and built a new visualization to gain deeper insights from your data.</p>
+</div>
+<hr />
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../accessing-the-application/" class="btn-secondary">← Previous: Access the Application </a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 11</strong> -  Analytics Lab </span>
+  </div>
+  <div class="nav-item">
+    <a href="../virtual-agent-lab/" class="btn-primary">Next: Virtual Agents Lab →</a>
+  </div>
+</div>
+
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../accessing-the-application/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Access the Application">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Access the Application
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../virtual-agent-lab/" class="md-footer__link md-footer__link--next" aria-label="Next: Building Virtual Agent with Dialogflow CX">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Building Virtual Agent with Dialogflow CX
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "toc.follow", "toc.integrate", "navigation.instant", "navigation.tracking"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
