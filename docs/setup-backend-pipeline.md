@@ -1,11 +1,12 @@
-# 4. Automating Backend Deployments with Cloud Build
+# Automating Backend Deployments with Cloud Build
 
 In this section, we'll harness the power of Google Cloud Build to create a Continuous Integration (CI) pipeline. This is a crucial step in modern software development.
 
 Once configured, this pipeline will automatically build and deploy our backend application to Cloud Run every time we push new code to our GitHub repository. No more manual deployments!
 
-## Create a Cloud Build Trigger
+---
 
+### Step 1: Create a Cloud Build Trigger
 Let's start by creating the trigger that will listen for changes in our repository.
 
 1.  In the Google Cloud Console, use the top search bar to find `Cloud Build`, then select **Triggers** from the results.
@@ -14,7 +15,7 @@ Let's start by creating the trigger that will listen for changes in our reposito
 2.  On the **Triggers** page, click **Create trigger**.
     ![Cloud Build Triggers Page](assets/images/cloud_build_triggers_page.png)
 
-## Configure the Trigger
+### Step 2: Configure the Trigger
 
 Now, we'll configure the trigger to connect to our specific GitHub repository and run our deployment instructions.
 
@@ -68,7 +69,7 @@ Now, we'll configure the trigger to connect to our specific GitHub repository an
 
 9.  Click the **Create** button at the bottom of the page to save your trigger.
 
-## Triggering Your First Automated Deployment
+### Step 3: Trigger Your First Automated Deployment
 
 To trigger our pipeline, we need to push a new commit to our GitHub repository. We'll make a small, cosmetic change to do this.
 
@@ -104,7 +105,7 @@ To trigger our pipeline, we need to push a new commit to our GitHub repository. 
     Your push to the `master` branch is the event that our Cloud Build trigger is waiting for!
     ![successful push to backend repo](assets/images/successful-push.png)
 
-## Monitor the Build and Verify Deployment
+### Step 4: Monitor the Build and Verify Deployment
 
 1.  Return to the Google Cloud Console and navigate to the Cloud Build **History** page. You'll see your build kick off automatically, listed with a "Running" status. Click on it to view the live logs.
     ![Cloud Build History](assets/images/cloud_build_history.png)
@@ -121,4 +122,23 @@ To trigger our pipeline, we need to push a new commit to our GitHub repository. 
 !!! success "Congratulations! Backend Automation Complete!"
     You have successfully configured a professional Continuous Integration / Continuous Deployment (CI/CD) pipeline. From now on, every time you `git push` a change to the `master` branch, Cloud Build will automatically handle the deployment for you.
 
-    Next, we will apply these same principles to our frontend application.
+---
+
+## Next Steps
+
+**Great job!** Next, we will apply these same principles to our frontend application.
+
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../setup-backend-repository/" class="btn-secondary">← Previous: Setup Backend Repsitory</a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 6</strong> -  Setup Backend Pipeline </span>
+  </div>
+  <div class="nav-item">
+    <a href="../setup-frontend-repository" class="btn-primary">Next: Setup Frontend Repository →</a>
+  </div>
+</div>
+---
+

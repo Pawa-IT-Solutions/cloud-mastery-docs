@@ -1,46 +1,61 @@
+# Pawa IT Cloud Mastery Training
+<div class="training-grid">
 
-# Cloud Mastery Training
+  <div class="training-card">
+    <h3>Intelligent Foundations</h3>
+    <div class="speaker">Oscar Limoke</div>
+    <div class="description">
+      Get introduced to cloud computing fundamentals, training objectives, and prepare for the comprehensive hands-on labs ahead.
+    </div>
+    <div class="card-actions">
+      <a href="introduction/" class="btn-primary">Start Introduction</a>
+    </div>
+  </div>
 
-Welcome to the Cloud Mastery Training session! 🎯  
-This guide provides a complete, step-by-step walkthrough of the hands-on labs we shall be covering. Please follow the sections in order to ensure your environment is set up correctly for subsequent steps.  
-Trainer: Basil Ndonga (DevOps Engineer)
+  <div class="training-card">
+    <h3>GCP Migration Lab</h3>
+    <div class="speaker">Eddie Ngugi</div>
+    <div class="description">
+      Learn to migrate on-premises applications to Google Cloud Platform. Set up GCP environment and configure Cloud SQL database infrastructure.
+    </div>
+    <div class="card-actions">
+      <a href="prepare-gcp-environment/" class="btn-primary">Start Migration Labs</a>
+    </div>
+  </div>
 
-## 🚀 DevOps Session
-### 🔧 GCP Setup
+  <div class="training-card">
+    <h3>Automate Securely</h3>
+    <div class="speaker">Basil Ndonga</div>
+    <div class="description">
+      Master DevOps practices and CI/CD pipelines on GCP. Build, deploy, and manage applications with automated workflows and security best practices.
+    </div>
+    <div class="card-actions">
+      <a href="prepare-gcp-environment/" class="btn-primary">Start DevOps Lab</a>
+    </div>
+  </div>
 
-1. **Prepare GCP Environment** - Set up your Google Cloud Platform environment  
-2. **Setup Cloud SQL Database** - Configure your database infrastructure
+  <div class="training-card">
+    <h3>Data to Dashboards</h3>
+    <div class="speaker">John Higi</div>
+    <div class="description">
+      Transform raw data into actionable insights using GCP's analytics and visualization tools. Learn to build compelling dashboards and reports.
+    </div>
+    <div class="card-actions">
+      <a href="data-analytics-visualization/" class="btn-primary">Start Analytics Lab</a>
+    </div>
+  </div>
 
-### 🖥️ Backend Setup
+  <div class="training-card">
+    <h3>Build Your Agent</h3>
+    <div class="speaker">Nelson Ameyo</div>
+    <div class="description">
+      Create intelligent virtual agents using Dialogflow CX. Build conversational AI that can understand, respond, and assist users effectively.
+    </div>
+    <div class="card-actions">
+      <a href="virtual-agent-lab/" class="btn-primary">Build Virtual Agent</a>
+    </div>
+  </div>
 
-3. **Prepare GitHub & Backend Repo** - Initialize your backend repository  
-4. **Setup Cloud Build for Backend** - Configure CI/CD for backend services
+</div>
 
-### 🌐 Frontend Setup
-
-5. **Setup Frontend Repository** - Prepare your frontend application  
-6. **Setup Cloud Build for Frontend** - Configure CI/CD for frontend deployment
-
-## 🚀 Deployment
-
-7. **Access the Application** - Deploy and access your complete application
-
-## 🤖 Virtual Agents Session
-### 🤖 AI Agent Development
-
-8. **Virtual Agent Class** - Build intelligent conversational AI agents
-
-## ✅ Getting Started
-
-### 💡 Quick Start Tip
-Click on **Lab 1: Prepare GCP Environment** above to begin the training. Make sure to complete each step before moving to the next.
-
-### 📋 Progress Checklist
-
-- ✅ Complete each lab in sequence  
-- ✅ Take notes during hands-on exercises  
-- ✅ Ask questions if you get stuck  
-- ✅ Practice concepts in your own projects
-
-Happy learning! 🎉
 

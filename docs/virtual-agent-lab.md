@@ -1,4 +1,4 @@
-# Making a virtual agent
+# Build Your Agent
 
 This agent enables customers to browse e-commerce products and complete purchases
 

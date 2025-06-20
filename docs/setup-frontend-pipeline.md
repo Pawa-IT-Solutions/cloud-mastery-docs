@@ -1,13 +1,15 @@
-# 6. Setup Cloud Build for the Frontend
+# Setup Cloud Build for the Frontend
 
 We will now create the final CI/CD pipeline for our frontend application. This process is very similar to the backend setup but requires different environment variables for the application to connect to the backend API.
 
-### Create the Frontend Trigger
+---
+
+### Step 1: Create the Frontend Trigger
 
 1.  Navigate back to **Cloud Build > Triggers** in the Google Cloud console.
 2.  Click **Create trigger**.
 
-### Configure the Trigger
+### Step 2: Configure the Trigger
 
 1.  **Name**: `cloud-mastery-frontend-deploy`
 2.  **Region**: `us-central1 (Iowa)`
@@ -45,4 +47,21 @@ We will now create the final CI/CD pipeline for our frontend application. This p
     ![List of Both Triggers](assets/images/cb_frontend_triggers_list.png)
 
 ---
+
+## Next Steps
+
 **Frontend pipeline is configured!** In the final step, we will run this trigger and access our fully deployed application.
+
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../setup-frontend-repository/" class="btn-secondary">← Previous: Setup Frontend Repsitory</a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 6</strong> -  Setup Frontend Pipeline </span>
+  </div>
+  <div class="nav-item">
+    <a href="../accessing-the-application" class="btn-primary">Next: Access the Applicantion →</a>
+  </div>
+</div>
+---
