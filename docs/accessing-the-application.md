@@ -70,3 +70,18 @@ This is the moment of truth! Let's view the live application.
     -   Built two separate CI/CD pipelines with Cloud Build for automated deployments.
     -   Passed secrets securely to the build process using substitution variables.
     -   Deployed both backend and frontend containerized services to Cloud Run.
+
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../setup-frontend-pipeline/" class="btn-secondary">← Previous: Setup Frontend Pipeline</a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 10</strong> -  Access the application </span>
+  </div>
+  <div class="nav-item">
+    <a href="../data-analytics-lab/" class="btn-primary">Next: Analytics Lab →</a>
+  </div>
+</div>
+
+---
