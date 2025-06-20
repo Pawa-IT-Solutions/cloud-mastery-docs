@@ -52,7 +52,7 @@ markdown_extensions:
   - pymdownx.snippets
   - admonition  # This enables !!! note syntax
   - pymdownx.details  # This enables collapsible admonitions
-  
+
 extra_css:
   - assets/css/extra.css
 
@@ -69,7 +69,7 @@ nav:
       - "Setup Backend Repository": setup-backend-repository.md
       - "Setup Backend Pipeline": setup-backend-pipeline.md
       - "Setup Frontend Repository": setup-frontend-repository.md
-      - "Setup Cloud Build for Frontend": setup-cloud-build-frontend.md
+      - "Setup Cloud Build for Frontend": setup-frontend-pipeline.md
       - "Access the Application": accessing-the-application.md
   - "Data to Dashboards":
       - "Data Analytics & Visualization": data-analytics-lab.md
