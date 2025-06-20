@@ -19,7 +19,7 @@
       Learn to migrate on-premises applications to Google Cloud Platform. Set up GCP environment and configure Cloud SQL database infrastructure.
     </div>
     <div class="card-actions">
-      <a href="prepare-gcp-environment/" class="btn-primary">Start Migration Labs</a>
+      <a href="gcp-migration-lab/" class="btn-primary">Start Migration Labs</a>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
       Master DevOps practices and CI/CD pipelines on GCP. Build, deploy, and manage applications with automated workflows and security best practices.
     </div>
     <div class="card-actions">
-      <a href="prepare-gcp-environment/" class="btn-primary">Start DevOps Lab</a>
+      <a href="devops-lab/" class="btn-primary">Start DevOps Lab</a>
     </div>
   </div>
 
@@ -41,7 +41,7 @@
       Transform raw data into actionable insights using GCP's analytics and visualization tools. Learn to build compelling dashboards and reports.
     </div>
     <div class="card-actions">
-      <a href="data-analytics-visualization/" class="btn-primary">Start Analytics Lab</a>
+      <a href="data-analytics-lab/" class="btn-primary">Start Analytics Lab</a>
     </div>
   </div>
 
