@@ -407,4 +407,21 @@ Let's visualize the breakdown of our new status groups with a pie chart.
     *   Here you can change colors, add a title, change the font, and choose whether to show percentages or values on the slices.
     ![Style your chart](assets/images/style-the-chart.png)
 
-You have now successfully copied a dashboard, connected it to your own BigQuery data, enriched it with a custom calculated field, and built a new visualization to gain deeper insights from your data.
+---
+
+!!! success 
+    You have now successfully copied a dashboard, connected it to your own BigQuery data, enriched it with a custom calculated field, and built a new visualization to gain deeper insights from your data.
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../accessing-the-application/" class="btn-secondary">← Previous: Access the Application </a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 11</strong> -  Analytics Lab </span>
+  </div>
+  <div class="nav-item">
+    <a href="../virtual-agent-lab/" class="btn-primary">Next: Virtual Agents Lab →</a>
+  </div>
+</div>
+
+---

@@ -232,7 +232,6 @@ Other Connections
 None
 ```
 
-
 ## Deploying your agent
 
 - On the top navigation, click on Publish Agent
@@ -242,3 +241,17 @@ None
 ![image.png](assets/virtual_agent/deploy.png)
 
 ![image.png](assets/virtual_agent/embed.png)
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../data-analytics-lab/" class="btn-secondary">← Previous: Data Analytics Lab </a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 11</strong> -  Virtual Agent Lab </span>
+  </div>
+  <div class="nav-item">
+    <a href="../end-of-training/" class="btn-primary">Next: End of Training →</a>
+  </div>
+</div>
+
+---
