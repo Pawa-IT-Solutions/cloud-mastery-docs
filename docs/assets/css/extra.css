@@ -27,7 +27,6 @@ footer {
 /* 2-column grid layout for index page */
 .training-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
     margin: 2rem 0;
 }
