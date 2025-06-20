@@ -55,7 +55,7 @@ We will now create the final CI/CD pipeline for our frontend application. This p
 ---
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../setup-frontend-repository/" class="btn-secondary">← Previous: Setup Frontend Repsitory</a>
+    <a href="../setup-frontend-repository/" class="btn-secondary">← Previous: Setup Frontend Repo</a>
   </div>
   <div class="nav-item">
     <span><strong>Section 9</strong> -  Setup Frontend Pipeline </span>
