@@ -331,28 +331,27 @@ This process combines copying the report and connecting it to your new data sour
     *   Finally, select the **Table** (e.g., `cloud_mastery` if that's your table name, or `denormalized_orders`).
     *   Click the blue **CONNECT** button in the top-right corner.
 
-    ![Connect to BigQuery Table](assets/images/image-23.png)
-    ![BigQuery Connector Configuration Details](assets/images/image-24.png)
+    ![Connect to BigQuery Table](assets/images/click-connect.png)
 
 5.  **Confirm the Schema:**
     *   Looker Studio will now show you all the fields (columns) from your BigQuery table and its best guess for their data types (e.g., Number, Text, Date & Time). It's usually very accurate.
     *   Click **ADD TO REPORT** in the top-right corner. (Image for this step is missing, but it's a standard Looker Studio UI element after connecting a data source).
+    ![Add to report](assets/images/add-to-report.png)
 
 6.  **Finalize the Copy:**
     *   You will be back at the "Copy this report" window. Your new BigQuery table should now be listed as the **New Data Source**.
     *   Click **COPY REPORT**.
 
-    ![Finalize Report Copy with New Data Source](assets/images/image-25.png) <!-- Assuming image 25 shows this step -->
-
-
     **What just happened?** Looker Studio has created a new copy of the dashboard. All the charts will now try to get their data from your `denormalized_orders` table.
 
     !!! note
         If the field names in your new table don't match the field names used by the original charts, some charts may appear "broken." You'll need to click on each broken chart and manually select the correct fields from your new data source in the **Setup** panel on the right.
+    ![Copy of dashboard](assets/images/copy-of-dashboard.png)
 
 ### Part 2: Add a Calculated Field
 
 Let's create a useful new field without changing our BigQuery table. We'll create a new field called `Order Status Group` that simplifies the status into "Completed," "In Progress," or "Other."
+    ![Order Status New](assets/images/new-order.png)
 
 1.  **Access the Data Source:**
     *   In the menu at the top of your new report, go to **Resource > Manage added data sources**.
@@ -376,6 +375,7 @@ Let's create a useful new field without changing our BigQuery table. We'll creat
             ELSE 'Other'
         END
         ```
+    ![Categories](assets/images/categories.png)
     *   Looker Studio will show a green checkmark once the formula syntax is valid.
     *   Click **SAVE** in the bottom-right corner.
 
@@ -391,6 +391,7 @@ Let's visualize the breakdown of our new status groups with a pie chart.
     *   In the top menu, click **Add a chart**.
     *   Select **Pie chart** from the dropdown.
     *   Your cursor will turn into a crosshair. Click anywhere on your report canvas to drop the new chart.
+    ![Add a chart](assets/images/add-new-chart.png)
 
 2.  **Configure the Chart's Data:**
     *   Click on your new pie chart to select it. The **Chart > Setup** panel will appear on the right.
@@ -399,9 +400,11 @@ Let's visualize the breakdown of our new status groups with a pie chart.
         *   Drag your new **Order Status Group** field from the "Available Fields" list on the right and drop it into the "Dimension" box.
     *   **Metric:** This is what determines the size of each slice.
         *   Drag the **order_id** field (or any unique row identifier like `Record Count`) into the "Metric" box. By default, if using `order_id`, it might sum or count. Ensure it's set to **Count Distinct (CTD)** for unique orders, or **Record Count** if you want to count all rows per status group.
+    ![Configure New chart](assets/images/config-new-chart.png)
 
 3.  **Style the Chart (Optional):**
     *   With the chart still selected, click the **Style** tab in the right-hand panel.
     *   Here you can change colors, add a title, change the font, and choose whether to show percentages or values on the slices.
+    ![Style your chart](assets/images/style-the-chart.png)
 
 You have now successfully copied a dashboard, connected it to your own BigQuery data, enriched it with a custom calculated field, and built a new visualization to gain deeper insights from your data.
