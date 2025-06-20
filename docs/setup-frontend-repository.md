@@ -1,8 +1,10 @@
-# 5. Setup the Frontend Repository
+# Setup the Frontend Repository
 
 Now we will repeat the process for the `cloud-mastery-frontend` application. We will fork the repository to our GitHub account and then clone it into our Cloud Shell environment.
 
-### Fork the Frontend Repository
+---
+
+### Step 1: Fork the Frontend Repository
 
 1.  Access the Cloud Mastery frontend repository here:
     [https://github.com/Pawa-IT-Solutions/cloud-mastery-frontend](https://github.com/Pawa-IT-Solutions/cloud-mastery-frontend)
@@ -19,7 +21,7 @@ Now we will repeat the process for the `cloud-mastery-frontend` application. We 
 
     ![Forked Frontend Repository is Ready](assets/images/github_forked_repo_ready_frontend.png)
 
-### Clone the Frontend Repository to Cloud Shell
+### Step 2: Clone the Frontend Repository to Cloud Shell
 
 We will clone the frontend into a separate directory within our Cloud Shell home directory.
 
@@ -64,4 +66,21 @@ We will clone the frontend into a separate directory within our Cloud Shell home
 
 ---
 
+## Next Steps
+
 **Frontend repository is ready!** You now have the source code for both the backend and frontend applications in your Cloud Shell. Next, we will create the Cloud Build trigger to automate the deployment of the frontend.
+
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../setup-backend-pipeline/" class="btn-secondary">← Previous: Setup Backend Pipeline</a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 7 </strong> -  Setup Frontend Repository </span>
+  </div>
+  <div class="nav-item">
+    <a href="../setup-frontend-pipeline" class="btn-primary">Next: Setup Frontend Pipeline →</a>
+  </div>
+</div>
+
+---

@@ -1,7 +1,6 @@
 # Building conversational agents with DialogflowCX
 ![image.png](assets/virtual_agent/intro.png)
 
-
 This agent enables customers to browse e-commerce products and complete purchases
 
 ## Preparing your agent environment

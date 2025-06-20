@@ -1,8 +1,8 @@
-# 2. Setup Database in Cloud SQL
+# Setup Database in Cloud SQL
 
 Next, we need to set up the database to ensure all the necessary data is populated for our application. We will do this by importing a pre-configured SQL file into our Cloud SQL instance.
 
-## Navigate to Cloud SQL
+### Step 1: Navigate to Cloud SQL
 
 1.  Navigate to the Cloud SQL instances page by searching for "Cloud SQL" in the top search bar or by using this direct link:
     [https://console.cloud.google.com/sql/instances](https://console.cloud.google.com/sql/instances)
@@ -11,7 +11,7 @@ Next, we need to set up the database to ensure all the necessary data is populat
 
     ![Cloud SQL Instances List](assets/images/sql_instances_list.png)
 
-## Import the Database
+### Step 2: Import the Database
 
 1.  Click on the **Instance ID** to open the instance details page.
 
@@ -39,4 +39,22 @@ Next, we need to set up the database to ensure all the necessary data is populat
 
 ---
 
+## Next Steps
+
 **Database setup is complete!** You can now proceed to the next step, where we will prepare our GitHub environment.
+
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../devops-lab/" class="btn-secondary">← Previous: DevOps Lab</a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 4</strong> -  Database Setup </span>
+  </div>
+  <div class="nav-item">
+    <a href="../setup-github" class="btn-primary">Next: Setup Github →</a>
+  </div>
+</div>
+
+---
+
