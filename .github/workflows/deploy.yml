@@ -2,7 +2,7 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - master  # or your source branch
+      - master 
 permissions:
   contents: write  # needed to push to gh-pages
 
@@ -24,4 +24,4 @@ jobs:
           pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
 
       - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --clean
+        run: mkdocs gh-deploy --force
