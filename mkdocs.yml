@@ -75,6 +75,8 @@ nav:
       - "Data Analytics & Visualization": data-analytics-lab.md
   - "Build Your Agent":
       - "Building Virtual Agent with Dialogflow CX": virtual-agent-lab.md
+  - "End of Training":
+      - "End of Training": end-of-training.md
 extra:
   generator: false
 

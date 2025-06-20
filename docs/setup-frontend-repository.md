@@ -76,7 +76,7 @@ We will clone the frontend into a separate directory within our Cloud Shell home
     <a href="../setup-backend-pipeline/" class="btn-secondary">← Previous: Setup Backend Pipeline</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 7 </strong> -  Setup Frontend Repo </span>
+    <span><strong>Section 8 </strong> -  Setup Frontend Repo </span>
   </div>
   <div class="nav-item">
     <a href="../setup-frontend-pipeline" class="btn-primary">Next: Setup Frontend Pipeline →</a>
