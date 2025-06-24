@@ -244,10 +244,10 @@ None
 ---
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../data-analytics-lab/" class="btn-secondary">← Previous: Data Analytics Lab </a>
+    <a href="../data-pipeline-visualize-looker/" class="btn-secondary">← Previous: Looker Studio </a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 11</strong> -  Virtual Agent Lab </span>
+    <span><strong>Section 25</strong> -  Virtual Agent Lab </span>
   </div>
   <div class="nav-item">
     <a href="../end-of-training/" class="btn-primary">Next: End of Training →</a>

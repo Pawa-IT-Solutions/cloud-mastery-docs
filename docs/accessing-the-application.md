@@ -77,7 +77,7 @@ This is the moment of truth! Let's view the live application.
     <a href="../setup-frontend-pipeline/" class="btn-secondary">← Previous: Setup Frontend Pipeline</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 10</strong> -  Access the application </span>
+    <span><strong>Section 19</strong> -  Access the application </span>
   </div>
   <div class="nav-item">
     <a href="../data-analytics-lab/" class="btn-primary">Next: Analytics Lab →</a>

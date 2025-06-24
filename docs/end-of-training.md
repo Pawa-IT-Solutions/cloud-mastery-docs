@@ -44,3 +44,18 @@ With the skills you've developed in this training session, you're well-prepared 
 
 **Keep coding, keep learning, and keep building amazing solutions!**
 
+---
+<div class="page-nav">
+  <div class="nav-item">
+    <a href="../virtual-agent-lab/" class="btn-secondary">← Previous: Virtual Agents Lab </a>
+  </div>
+  <div class="nav-item">
+    <span><strong>Section 26</strong> -  End of Training </span>
+  </div>
+  <div class="nav-item">
+    <a href="../" class="btn-primary">Return to Home →</a>
+  </div>
+</div>
+
+---
+

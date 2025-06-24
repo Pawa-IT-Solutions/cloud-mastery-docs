@@ -80,7 +80,7 @@ To securely clone the repository to your Cloud Shell, you need to add your Cloud
     <a href="../setup-cloud-sql/" class="btn-secondary">← Previous: Database Setup</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 5</strong> -  Github Setup </span>
+    <span><strong>Section 14</strong> -  Github Setup </span>
   </div>
   <div class="nav-item">
     <a href="../setup-backend-repository" class="btn-primary">Next: Setup Backend Repo →</a>
