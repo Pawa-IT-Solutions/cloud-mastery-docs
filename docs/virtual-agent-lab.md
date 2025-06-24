@@ -237,7 +237,34 @@ None
 - On the top navigation, click on Publish Agent
 - Choose your deployment environment, access and UI style
 - Click Enable Conversational Agent
-- Copy the embed code displayed and place it in JSFiddle notebook
+- Copy the embed code displayed into your HTML template here
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Agent Class</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PLACE YOUR AGENT EMBED CODE HERE -->
+
+  </head>
+  <body class="m-0 p-0">
+    <!-- Main container with 100vh height -->
+    <div class="h-screen w-full flex flex-col bg-gray-100">
+      <!-- Header Section -->
+      <img
+        src="https://storage.googleapis.com/cm_ecommerce/image.png"
+        class="w-full"
+      />
+    </div>
+  </body>
+</html>
+```
+
 ![image.png](assets/virtual_agent/deploy.png)
 
 ![image.png](assets/virtual_agent/embed.png)
