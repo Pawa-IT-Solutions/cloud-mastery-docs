@@ -1,4 +1,6 @@
-# Making a virtual agent
+# Building conversational agents with DialogflowCX
+![image.png](assets/virtual_agent/intro.png)
+
 
 This agent enables customers to browse e-commerce products and complete purchases
 
@@ -230,3 +232,14 @@ Other Connections
 ```
 None
 ```
+
+
+## Deploying your agent
+
+- On the top navigation, click on Publish Agent
+- Choose your deployment environment, access and UI style
+- Click Enable Conversational Agent
+- Copy the embed code displayed and place it in JSFiddle notebook
+![image.png](assets/virtual_agent/deploy.png)
+
+![image.png](assets/virtual_agent/embed.png)
