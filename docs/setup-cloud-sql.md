@@ -49,7 +49,7 @@ Next, we need to set up the database to ensure all the necessary data is populat
     <a href="../devops-lab/" class="btn-secondary">← Previous: DevOps Lab</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 4</strong> -  Database Setup </span>
+    <span><strong>Section 13</strong> -  Database Setup </span>
   </div>
   <div class="nav-item">
     <a href="../setup-github" class="btn-primary">Next: Setup Github →</a>

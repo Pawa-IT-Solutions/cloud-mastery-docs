@@ -66,10 +66,10 @@ For a better experience, we will open the Cloud Shell in its own dedicated brows
 ---
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../gcp-migration-lab/" class="btn-secondary">← Previous: GCP Migration Lab</a>
+    <a href="../migration-dns-update/" class="btn-secondary">← Previous: GCP Migration Lab</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 3</strong> -  DevOps Lab </span>
+    <span><strong>Section 12</strong> -  DevOps Lab </span>
   </div>
   <div class="nav-item">
     <a href="../setup-cloud-sql" class="btn-primary">Next: Database Setup →</a>

@@ -19,7 +19,7 @@
       Learn to migrate on-premises applications to Google Cloud Platform. Set up GCP environment and configure Cloud SQL database infrastructure.
     </div>
     <div class="card-actions">
-      <a href="gcp-migration-lab/" class="btn-primary">Start Migration Labs</a>
+      <a href="migration-overview/" class="btn-primary">Start Migration Labs</a>
     </div>
   </div>
 
