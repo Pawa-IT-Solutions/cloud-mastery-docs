@@ -60,8 +60,20 @@ nav:
   - Home: index.md
   - "Introduction":
       - "Cloud Mastery Training Introduction": introduction.md
-  - "GCP Migration Lab":
-      - "Prepare GCP Environment": gcp-migration-lab.md
+  # - "GCP Migration Lab":
+  #     - "Prepare GCP Environment": gcp-migration-lab.md
+  - "Application Migration to GCP":
+      - "Migration Overview": migration-overview.md
+      - "Prepare On-Prem VM": migration-prepare-vm.md
+      - "Create VM Disk Image": migration-create-image.md
+      - "Create GCS Bucket": migration-gcs-bucket.md
+      - "Install & Configure GCloud CLI": migration-gcloud-cli.md
+      - "Upload Image to GCS": migration-upload-image.md
+      - "Create GCP VPC": migration-create-vpc.md
+      - "Import VMDK as GCP Image": migration-import-image.md
+      - "Create GCP VM Instance": migration-create-vm.md
+      - "Access & Configure VM": migration-access-vm.md
+      - "Update DNS Records": migration-dns-update.md
   - "Automate Securely":
       - "DevOps & CI/CD on GCP Lab": devops-lab.md
       - "Database setup": setup-cloud-sql.md
@@ -72,7 +84,11 @@ nav:
       - "Setup Cloud Build for Frontend": setup-frontend-pipeline.md
       - "Access the Application": accessing-the-application.md
   - "Data to Dashboards":
-      - "Data Analytics & Visualization": data-analytics-lab.md
+      - "Pipeline Overview": data-analytics-lab.md
+      - "Setup BigQuery": data-pipeline-setup-bigquery.md
+      - "Create Cloud Function": data-pipeline-create-function.md
+      - "Schedule with Cloud Scheduler": data-pipeline-schedule-job.md
+      - "Visualize with Looker Studio": data-pipeline-visualize-looker.md
   - "Build Your Agent":
       - "Building Virtual Agent with Dialogflow CX": virtual-agent-lab.md
   - "End of Training":
