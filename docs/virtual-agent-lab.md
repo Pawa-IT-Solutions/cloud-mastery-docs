@@ -1,9 +1,5 @@
 # Building conversational agents with DialogflowCX
 ![image.png](assets/virtual_agent/intro.png)
-<<<<<<< HEAD
-=======
-
->>>>>>> 3f9cddb (Improving docs)
 
 This agent enables customers to browse e-commerce products and complete purchases
 
@@ -236,10 +232,6 @@ Other Connections
 None
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3f9cddb (Improving docs)
 ## Deploying your agent
 
 - On the top navigation, click on Publish Agent
@@ -249,6 +241,7 @@ None
 ![image.png](assets/virtual_agent/deploy.png)
 
 ![image.png](assets/virtual_agent/embed.png)
+
 ---
 <div class="page-nav">
   <div class="nav-item">

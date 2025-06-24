@@ -132,6 +132,7 @@ To trigger our pipeline, we need to push a new commit to our GitHub repository. 
 <div class="page-nav">
   <div class="nav-item">
     <a href="../setup-backend-repository/" class="btn-secondary">← Previous: Setup Backend Repository</a>
+
   </div>
   <div class="nav-item">
     <span><strong>Section 16</strong> -  Setup Backend Pipeline </span>
