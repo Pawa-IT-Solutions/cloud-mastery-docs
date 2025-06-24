@@ -66,7 +66,7 @@ Now you can clone your forked repository.
     <a href="../setup-github/" class="btn-secondary">← Previous: Setup Github</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 6</strong> -  Prepare Backend Repo </span>
+    <span><strong>Section 15</strong> -  Prepare Backend Repo </span>
   </div>
   <div class="nav-item">
     <a href="../setup-backend-pipeline" class="btn-primary">Next: Setup Backend Pipeline →</a>

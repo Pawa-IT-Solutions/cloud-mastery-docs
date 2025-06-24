@@ -24,9 +24,9 @@ Having learnt basics of GCP, its time to proceed to GCP Migration Lab
     <a href="../introduction/" class="btn-secondary">← Previous: Introduction</a>
   </div>
   <div class="nav-item">
-    <span><strong>Section 1</strong> - Introduction</span>
+    <span>Introduction</span>
   </div>
   <div class="nav-item">
-    <a href="../gcp-migration-lab" class="btn-primary">Next: GCP Migration Lab →</a>
+    <a href="../migration-overview" class="btn-primary">Next: GCP Migration Lab →</a>
   </div>
 </div>

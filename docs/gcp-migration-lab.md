@@ -38,6 +38,6 @@ Once your GCP environment is ready, proceed to migrate the onprem VM to GCP.
     <span><strong>Section 2</strong> -  GCP Migration Lab </span>
   </div>
   <div class="nav-item">
-    <a href="../devops-lab" class="btn-primary">Next: DevOps Lab →</a>
+    <a href="../migration-overview" class="btn-primary">Next: Application Migration →</a>
   </div>
 </div>
