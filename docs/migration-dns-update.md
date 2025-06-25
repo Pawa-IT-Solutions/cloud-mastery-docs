@@ -12,6 +12,8 @@ First, confirm the public IP address of your newly created VM.
 
 You can paste it on a new tab on a browser of your choice
 
+![Access VM via browser](assets/images/access-migrated-vm.png)
+
 --- 
 
 <div class="page-nav">

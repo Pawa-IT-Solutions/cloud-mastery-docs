@@ -6,7 +6,7 @@ It's a best practice to create a dedicated network for your new application with
 
 1. Navigate to the VPC Networks page in the Google Cloud Console within your project: <a href="https://console.cloud.google.com/vpc/networks" class="external-link">(https://console.cloud.google.com/vpc/networks)</a>
 2. Click **Create VPC network**
-![Create VPC Network](assets/images/create-vpc.png)
+![Create VPC Network](assets/images/create-vpc.png){: style="width: 50%"}
 ### Configure VPC Settings
 
 **Basic VPC Configuration:**
@@ -14,7 +14,7 @@ It's a best practice to create a dedicated network for your new application with
 - **Name**: `my-cloud-mastery-vpc`
 - **Description**: VPC for migrated application
 - **Subnet creation mode**: Select **Custom**
-![create subnet](assets/images/create-subnet.png)
+![create subnet](assets/images/create-subnet.png){: style="width: 50%"}
 
 ### Configure Subnet
 
@@ -26,6 +26,8 @@ It's a best practice to create a dedicated network for your new application with
     - **Recommended**: `10.10.1.0/24` (This gives you 256 addresses, from 10.10.1.0 to 10.10.1.255)
   - **Private Google Access**: Turn it **On** (allows VMs without external IPs to access Google APIs)
   - **Flow logs**: Turn **Off** (unless you need network monitoring)
+
+![App Subnet](assets/images/app-subnet.png){: style="width: 50%"}
 
 1. Click **DONE** to finish subnet configuration  
 2. Click **CREATE** to create the VPC network
@@ -70,8 +72,9 @@ Navigate to **VPC network → Firewall** and create these essential rules for yo
      - Check **Specified protocols and ports**
      - Check **TCP**
      - Enter port: `80`
-
 3. Click **CREATE**
+![http ingress](assets/images/http-ingress.png){: style="width: 50%"}
+
 
 ### Rule 3: Allow HTTPS Traffic (Optional but Recommended)
 
