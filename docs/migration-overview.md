@@ -61,7 +61,7 @@ By the end of this migration guide, you will have:
 
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../gcp-migration-lab/" class="btn-secondary">← Previous: Prep GCP Environment</a>
+    <a href="../introduction/" class="btn-secondary">← Previous: Prep GCP Environment</a>
   </div>
   <div class="nav-item">
     <span><strong>Section 1</strong> - Application Migration to GCP</span>

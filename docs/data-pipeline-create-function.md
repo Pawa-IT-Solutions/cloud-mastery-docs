@@ -78,7 +78,7 @@ def denormalize_and_load(request):
 
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../data-analytics-lab/" class="btn-secondary">← Previous: Pipeline Overview</a>
+    <a href="../data-pipeline-setup-bigquery/" class="btn-secondary">← Previous: Setup BigQuery</a>
   </div>
   <div class="nav-item">
     <span><strong>Section 22</strong>  - Create Cloud Function</span>
