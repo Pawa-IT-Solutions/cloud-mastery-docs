@@ -308,3 +308,7 @@ footer {
   transform: translateY(-1px);
   transition: all 0.2s ease;
 }
+
+iframe[src*="youtube"] {
+  border: none;
+}
