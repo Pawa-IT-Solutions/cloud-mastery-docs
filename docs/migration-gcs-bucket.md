@@ -25,6 +25,7 @@ You can create a Google Cloud Storage bucket using either:
 
 6. Click **Create** to create the bucket
 
+
 ### Using Google Cloud CLI (Alternative)
 
 If you prefer using the command line, you can create a bucket with:
@@ -39,6 +40,8 @@ gsutil mb gs://your-project-migration-images
 2. Verify that your bucket appears in the list
 3. Click on your bucket name to view its contents (it should be empty)
 4. Note the bucket name as you'll need it in the next phases
+
+![Cloud Storage Bucket](assets/images/cloud-storage-details.png)
 
 ## Bucket Configuration Best Practices
 
