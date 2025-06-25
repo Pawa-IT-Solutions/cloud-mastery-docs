@@ -30,25 +30,50 @@ Run `gcloud init` to get started:
 ```bash
 gcloud init
 ```
+![Gcloud init](assets/images/gcloud-init.png)
 
 ### Authentication Process
 
-1. **Choose Configuration**: Select option `[1] Re-initialize this configuration [default] with new settings`
+**Choose Configuration**: Select option `[1] Re-initialize this configuration [default] with new settings`
 
-2. **Login**: You'll be prompted to log in. Choose `Y` to continue with login
+**Login**: You'll be prompted to log in. Choose `Y` to continue with login
 
-3. **Browser Authentication**: 
-    - A URL will be provided for authentication
-    - Copy and paste the URL into your web browser
-    - Log in with your Google Cloud account
-    - Grant the necessary permissions
-    - Copy the verification code from the browser
+  ![y](assets/images/y.png)
 
-4. **Enter Verification Code**: Paste the verification code back in your terminal
+**Browser Authentication**
 
-5. **Select Project**: Choose the Google Cloud project where you want to perform the migration
+  A URL will be provided for authentication
 
-6. **Default Region/Zone**: Configure your default compute region and zone (recommended: choose the same region where you created your storage bucket)
+  Copy and paste the URL into your web browser
+
+  ![auth url](assets/images/auth-url.png)
+
+  Log in with your Google Cloud account
+
+  ![log 1](assets/images/log1.png)
+
+  Grant the necessary permissions
+
+  ![Grant permissions](assets/images/grant-permissions.png)
+  Copy the verification code from the browser
+  ![ver code](assets/images/ver-code.png)
+**Enter Verification Code**: Paste the verification code back in your terminal
+  ![ver code terminal](assets/images/ver-code-terminal.png)
+If successful, you will see a message letting you know which user you have signed in as
+  ![Sign in terminal](assets/images/sign-in-eddie-term.png)
+**Select Project**: Choose the Google Cloud project where you want to perform the migration
+  ![All projects](assets/images/all-projects.png)
+  ![Choose project](assets/images/choose-project.png)
+
+**Default Region/Zone**: Configure your default compute region and zone (recommended: choose the same region where you created your storage bucket)
+You can also do this by running this command: 
+!!! tip 
+    Replace zone-name with the us-central1-a
+
+```
+gcloud config set compute/zone zone-name
+```
+
 
 ### Verification
 

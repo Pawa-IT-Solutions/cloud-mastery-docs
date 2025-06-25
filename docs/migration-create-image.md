@@ -20,6 +20,8 @@ sudo dd if=/dev/sda of=/mnt/imagedisk/ubuntu-vm.img bs=4M status=progress
 
 This command will read your entire 50 GB OS disk (`/dev/sda`) and write a raw image file to your new 120 GB disk (`/mnt/imagedisk`).
 
+![read image](assets/images/read-image.png)
+
 ## Step 2: Verify the Raw Image
 
 After the `dd` command finishes, it is critical that we verify the file is the correct size:
@@ -46,6 +48,7 @@ Check that the conversion was successful:
 ```bash
 ls -lh /mnt/imagedisk/
 ```
+![conversion success](assets/images/convertion%20success.png)
 
 You should see the large `.img` file and a much smaller `.vmdk` file. The `.vmdk` is what you will upload to a Google Cloud Storage Bucket.
 
