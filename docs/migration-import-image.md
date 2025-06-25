@@ -26,8 +26,8 @@ On the "Create an image" page, fill in the following details to configure the im
 
 *   **Name**: `cloud-mastery-image`
     *   This will be the name of the final bootable image in GCP.
-    Grant the service account storage object IAM role to the public bucket accessed at [https://console.cloud.google.com/storage/browser/cloudmastery-image](https://console.cloud.google.com/storage/browser/cloudmastery-image)
-    You service account for the Migrate for Virtual Machine within your project will be something like: service-10892896680@gcp-sa-vmmigration.iam.gserviceaccount.com
+    Grant the `Storage Object Viewer` IAM role to the VM Migration service account on the public bucket located at [https://console.cloud.google.com/storage/browser/cloudmastery-image](https://console.cloud.google.com/storage/browser/cloudmastery-image).
+    The service account name will be similar to: `service-10892896680@gcp-sa-vmmigration.iam.gserviceaccount.com`
     ![sa-account](assets/images/image-sa-account.png)
 
 *   **Source**:

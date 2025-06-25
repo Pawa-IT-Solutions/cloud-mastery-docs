@@ -12,9 +12,9 @@ Using your preferred SSH or FTP tool, access the VM using the provided IP for yo
     - **Password**: cloud-mastery
     - **Domain**: train.cloudpartner.africa
 
-Open a Terminal using your preferred SSH client. We recommend Termius, which is a cross-platform SSH client and terminal emulator available for laptops, desktop, and mobile devices. You can learn how to install and set up Termius from <a href="https://termius.com/documentation/installation" class="external-link">here</a>.
+Open a Terminal using your preferred SSH client. We recommend Termius, which is a cross-platform SSH client and terminal emulator available for laptops, desktop, and mobile devices. You can learn how to install and set up Termius from [https://termius.com/documentation/installation](https://termius.com/documentation/installation).
 
-For context, we are migrating the application hosted on this virtual machine and accessible via the IP 213.148.17.53 and mapped to <a href="http://train.cloudpartner.africa/" class="external-link">train.cloudpartner.africa</a>
+For context, we are migrating the application hosted on this virtual machine and accessible via the IP 213.148.17.53 and mapped to [http://train.cloudpartner.africa/](http://train.cloudpartner.africa/)
 
 ![Access the traincloudpartner site](assets/images/access-train-cloud-http.png)
 
