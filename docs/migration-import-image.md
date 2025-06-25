@@ -10,13 +10,15 @@ Before you can import an image, you must ensure the **VM Migration API** (also k
     [https://console.cloud.google.com/compute/mfce](https://console.cloud.google.com/compute/mfce)
 2.  If the API is not already enabled, you will see an **Enable** button. Click it to activate the API. This may take a moment.
 
+![Enable VM Migration API](assets/images/enable-vm-migration.png)
+
 ## Step 2: Navigate to the Image Imports Tab
 
 1.  In the Google Cloud Console, use the navigation menu to go to **Compute Engine** > **Storage** > **Images**.
 2.  Click on the **IMAGE IMPORTS** tab at the top of the page.
 3.  Click **[+] CREATE IMAGE**.
 
-![Navigate to Image Imports](https://storage.googleapis.com/pawait-sitedocs/migration/gcp-navigate-image-imports.png)
+![Navigate to Image Imports](assets/images/create-image.png)
 
 ## Step 3: Configure the Image Import Job
 
@@ -24,6 +26,9 @@ On the "Create an image" page, fill in the following details to configure the im
 
 *   **Name**: `cloud-mastery-image`
     *   This will be the name of the final bootable image in GCP.
+    Grant the service account storage object IAM role to the public bucket accessed at [https://console.cloud.google.com/storage/browser/cloudmastery-image](https://console.cloud.google.com/storage/browser/cloudmastery-image)
+    You service account for the Migrate for Virtual Machine within your project will be something like: service-10892896680@gcp-sa-vmmigration.iam.gserviceaccount.com
+    ![sa-account](assets/images/image-sa-account.png)
 
 *   **Source**:
     1.  Click **BROWSE**.
@@ -45,9 +50,9 @@ On the "Create an image" page, fill in the following details to configure the im
 *   **Advanced options (leave as default)**:
     *   Do not check "Skip OS adaptation," "Generalize," or "Convert BIOS to UEFI" unless you have a specific reason. The import tool handles these conversions well automatically.
 
-![Configure Image Import](https://storage.googleapis.com/pawait-sitedocs/migration/gcp-configure-image-import.png)
+![Configure Image Import](assets/images/ubuntu-vm-dk.png)
 
-4.  Click **CREATE**.
+  Click **CREATE**.
 
 !!! info "Import in Progress"
     The image import process will begin. This can take anywhere from 10 to 30 minutes, or longer, depending on the size of the disk image. You can monitor the progress on the **Image imports** tab.

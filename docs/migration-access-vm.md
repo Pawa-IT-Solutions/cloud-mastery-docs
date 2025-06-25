@@ -16,7 +16,7 @@ You will connect to your new GCP VM using the same credentials (username and pas
 !!! warning "Use Original Credentials"
     It is critical to remember that you are logging in with the credentials from the *original machine*, not with any new GCP-generated keys. The cloning process copied the entire user and password database.
 
-![SSH into new GCP VM](https://storage.googleapis.com/pawait-sitedocs/migration/termius-connect-gcp.png)
+![SSH into new GCP VM](assets/images/ssh-vm.png)
 
 ## Step 2: Restart All Services
 

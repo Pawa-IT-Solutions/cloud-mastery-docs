@@ -20,6 +20,9 @@ Fill out the configuration details for your new VM.
 *   **Machine configuration**:
     *   **Series**: `E2`
     *   **Machine type**: `e2-medium` (2 vCPU, 4 GB memory).
+
+![Create VM](assets/images/create-instance.png)
+
 !!! tip "Tip"
     Try to select a machine type that closely matches the CPU and RAM of your original on-prem VM. You can always resize it later.
 
@@ -33,25 +36,29 @@ This is the most critical part of the configuration. You will tell GCP to use th
 4.  The **Boot disk type** and **Size (GB)** will default based on the image. You can increase the size if needed.
 5.  Click **Select**.
 
-![Configure Custom Boot Disk](https://storage.googleapis.com/pawait-sitedocs/migration/gcp-select-custom-image.png)
+![Import boot disk from gcs](assets/images/import-boot-disk.png)
+![Configure Custom Boot Disk](assets/images/config-boot-disk.png)
 
 ### Configure Networking and Firewall
 
-1.  Expand the **Advanced options** section.
-2.  Click on **Networking**.
-3.  Under **Network interfaces**, ensure the following is selected:
+  Expand the **Advanced options** section.
+  Click on **Networking**.
+  Under **Network interfaces**, ensure the following is selected:
     *   **Network**: `my-cloud-mastery-vpc`
     *   **Subnetwork**: `application-subnet`
-4.  Under **Firewall**, check the boxes for:
+  Under **Firewall**, check the boxes for:
     *   `Allow HTTP traffic`
     *   `Allow HTTPS traffic`
 
-5.  Review all the settings and click the **CREATE** button at the bottom of the page.
+![Network Settings](assets/images/config-networking.png)
 
-![Create VM Instance](https://storage.googleapis.com/pawait-sitedocs/migration/gcp-create-final-vm.png)
+  Review all the settings and click the **CREATE** button at the bottom of the page.
+
 
 !!! success "VM Instance Created"
     Your new virtual machine will now be provisioned and started. Once it's running, you will see a green checkmark next to its name in the VM instances list, and it will have both an Internal and an External IP address.
+
+![Migrated VM](assets/images/migrated-vm.png)
 
 ## What's Next
 
