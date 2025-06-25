@@ -272,7 +272,7 @@ None
 ---
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../data-pipeline-visualize-looker/" class="btn-secondary">← Previous: Looker Studio </a>
+    <a href="../data-pipeline-visualize-looker/" class="btn-secondary">← Previous: Visualize Data </a>
   </div>
   <div class="nav-item">
     <span><strong>Section 25</strong> -  Virtual Agent Lab </span>

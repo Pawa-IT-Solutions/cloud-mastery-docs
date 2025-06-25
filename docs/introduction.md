@@ -21,7 +21,7 @@ Having learnt basics of GCP, its time to proceed to GCP Migration Lab
 ---
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../introduction/" class="btn-secondary">← Previous: Introduction</a>
+    <a href="../" class="btn-secondary">← Previous: Home</a>
   </div>
   <div class="nav-item">
     <span>Introduction</span>

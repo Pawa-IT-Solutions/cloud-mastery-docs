@@ -16,7 +16,7 @@ You can paste it on a new tab on a browser of your choice
 
 <div class="page-nav">
 <div class="nav-item">
-<a href="../migration-phase9-access-vm/" class="btn-secondary">← Previous:  Access & Configure VM</a>
+<a href="../migration-access-vm/" class="btn-secondary">← Previous:  Access & Configure VM</a>
 </div>
 <div class="nav-item">
 <span><strong>Section 11</strong> - Access via IP</span>
