@@ -38,7 +38,7 @@ Before you begin, ensure you have the following:
 
 Throughout this migration, we will use several tools:
 
-- **SSH Client**: We recommend Termius, which is a cross-platform SSH client and terminal emulator available for laptops, desktop, and mobile devices. You can learn how to install and set up Termius from [here](https://termius.com/documentation/installation)
+- **SSH Client**: We recommend Termius, which is a cross-platform SSH client and terminal emulator available for laptops, desktop, and mobile devices. You can learn how to install and set up Termius from <a href="https://termius.com/documentation/installation" class="external-link">here</a>
 - **QEMU Utilities**: For disk format conversion
 - **Google Cloud CLI**: For authentication and file uploads
 - **Google Cloud Console**: For managing GCP resources
