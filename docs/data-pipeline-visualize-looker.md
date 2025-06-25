@@ -6,7 +6,7 @@ The final step is to unlock the value in our data by creating an interactive das
 
 *   A Looker Studio account ([lookerstudio.google.com](https://lookerstudio.google.com)).
 *   Your BigQuery table containing data.
-*   An existing dashboard template to copy.
+*   An existing dashboard template to copy. You can find the dashboard template here: <a href ="https://lookerstudio.google.com/reporting/0022c938-4bbb-41ed-a687-0535843f7d40/page/p_uf4yrqljsd" class="external-link">Looker Studio Dashboard Template</a>
 
 ## Step 1: Copy the Dashboard and Connect to Your Data
 
