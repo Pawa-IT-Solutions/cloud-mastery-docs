@@ -34,13 +34,11 @@ gcloud init
 
 ### Authentication Process
 
-**Choose Configuration**: Select option `[1] Re-initialize this configuration [default] with new settings`
-
-**Login**: You'll be prompted to log in. Choose `Y` to continue with login
-
+1. **Choose Configuration**: Select option `[1] Re-initialize this configuration [default] with new settings`
+2. **Login**: You'll be prompted to log in. Choose `Y` to continue with login
   ![y](assets/images/y.png)
 
-**Browser Authentication**
+3. **Browser Authentication**
 
   A URL will be provided for authentication
 
@@ -56,14 +54,14 @@ gcloud init
 
   ![Grant permissions](assets/images/grant-permissions.png)
   Copy the verification code from the browser
-  ![ver code](assets/images/ver-code.png)
+  ![ver code](assets/images/ver-code.png){: style="width: 50%"}
 **Enter Verification Code**: Paste the verification code back in your terminal
   ![ver code terminal](assets/images/ver-code-terminal.png)
 If successful, you will see a message letting you know which user you have signed in as
   ![Sign in terminal](assets/images/sign-in-eddie-term.png)
 **Select Project**: Choose the Google Cloud project where you want to perform the migration
-  ![All projects](assets/images/all-projects.png)
-  ![Choose project](assets/images/choose-project.png)
+  ![All projects](assets/images/all-projects.png){: style="width: 50%"}
+  ![Choose project](assets/images/choose-project.png){: style="width: 50%"}
 
 **Default Region/Zone**: Configure your default compute region and zone (recommended: choose the same region where you created your storage bucket)
 You can also do this by running this command: 

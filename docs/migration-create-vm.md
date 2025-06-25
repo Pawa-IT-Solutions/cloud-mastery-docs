@@ -41,20 +41,16 @@ This is the most critical part of the configuration. You will tell GCP to use th
 
 ### Configure Networking and Firewall
 
-  Expand the **Advanced options** section.
-  Click on **Networking**.
-  Under **Network interfaces**, ensure the following is selected:
-
-   *   **Network**: `my-cloud-mastery-vpc`
-   *   **Subnetwork**: `application-subnet`
-  
-   * Under **Firewall**, check the boxes for:
+1.  Expand the **Advanced options** section.
+2.  Click on **Networking**.
+3.  Under **Network interfaces**, ensure the following is selected:
+    *   **Network**: `my-cloud-mastery-vpc`
+    *   **Subnetwork**: `application-subnet`
+4.  Under **Firewall**, check the boxes for:
     *   `Allow HTTP traffic`
     *   `Allow HTTPS traffic`
-
-![Network Settings](assets/images/config-networking.png)
-
-  Review all the settings and click the **CREATE** button at the bottom of the page.
+  ![Network Settings](assets/images/config-networking.png)
+5. Review all the settings and click the **CREATE** button at the bottom of the page.
 
 
 !!! success "VM Instance Created"

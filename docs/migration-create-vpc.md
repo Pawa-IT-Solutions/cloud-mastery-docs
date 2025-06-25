@@ -4,7 +4,7 @@ It's a best practice to create a dedicated network for your new application with
 
 ## Step 1: Create the Custom VPC Network
 
-1. Navigate to the VPC Networks page in the Google Cloud Console within your project: <a href="https://console.cloud.google.com/vpc/networks" class="external-link">(https://console.cloud.google.com/vpc/networks)</a>
+1. Navigate to the VPC Networks page in the Google Cloud Console within your project: [https://console.cloud.google.com/vpc/networks](https://console.cloud.google.com/vpc/networks)
 2. Click **Create VPC network**
 ![Create VPC Network](assets/images/create-vpc.png){: style="width: 50%"}
 ### Configure VPC Settings
