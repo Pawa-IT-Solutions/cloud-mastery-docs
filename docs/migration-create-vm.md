@@ -44,9 +44,11 @@ This is the most critical part of the configuration. You will tell GCP to use th
   Expand the **Advanced options** section.
   Click on **Networking**.
   Under **Network interfaces**, ensure the following is selected:
-    *   **Network**: `my-cloud-mastery-vpc`
-    *   **Subnetwork**: `application-subnet`
-  Under **Firewall**, check the boxes for:
+
+   *   **Network**: `my-cloud-mastery-vpc`
+   *   **Subnetwork**: `application-subnet`
+  
+   * Under **Firewall**, check the boxes for:
     *   `Allow HTTP traffic`
     *   `Allow HTTPS traffic`
 
