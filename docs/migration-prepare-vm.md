@@ -24,7 +24,7 @@ This provides the `qemu-img` tool, which is essential for converting disk format
 
 ```bash
 sudo apt install update
-sudo apt install -y qemu-utils
+sudo apt-get install -y qemu-utils cloud-guest-utils
 ```
 ![Install qemu tools](assets/images/install-qemu.png)
 
@@ -40,7 +40,7 @@ lsblk
 The original VM's disk will appear as a device, e.g., `/dev/sda`, `/dev/vda`, `/dev/nvme0n1`. Look for the disk that matches the size of your VM's disk.
 ### Create a partition
 ```
-sudo fdisk /dev/sdb
+sudo fdisk /dev/sdb1
 ```
 Inside the fdisk prompt, press these keys in order, followed by Enter: n, p, 1, Enter, Enter, w.
 
