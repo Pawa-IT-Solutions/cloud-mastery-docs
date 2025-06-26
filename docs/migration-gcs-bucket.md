@@ -1,6 +1,7 @@
 # Create a Google Cloud Storage Bucket
 
 You can create a Google Cloud Storage bucket using either:
+
 - **Google Cloud Console (GUI)**: The easiest method for beginners, using a web browser
 - **Google Cloud CLI (gcloud)**: A faster method for those who prefer the command line or need to automate tasks
 
