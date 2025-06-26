@@ -32,6 +32,8 @@ For this lab, we will work with two application repositories: `cloud-mastery-bac
 
 To securely clone the repository to your Cloud Shell, you need to add your Cloud Shell's SSH key to your GitHub account.
 
+In the context of GitHub, public and private keys are used for secure authentication, primarily through SSH. The private key is kept secret on your local machine, while the corresponding public key is shared with GitHub. This allows GitHub to verify your identity when you perform actions like pushing to or pulling from a repository. 
+
 1.  Navigate back to your **Google Cloud Shell** tab.
 
 2.  Run the `ssh-keygen` command to generate a new SSH key. Press `Enter` three times to accept the default file location and create a key without a passphrase.
