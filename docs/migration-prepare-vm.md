@@ -18,7 +18,17 @@ For context, we are migrating the application hosted on this virtual machine and
 
 ![Access the traincloudpartner site](assets/images/access-train-cloud-http.png)
 
-## Step 2: Identify the Source Disk
+## Step 2: Install QEMU Utilities
+
+This provides the `qemu-img` tool, which is essential for converting disk formats to our preferred `.vmdk` format to allow us to import the Image in an acceptable format.
+
+```bash
+sudo apt install update
+sudo apt install -y qemu-utils
+```
+![Install qemu tools](assets/images/install-qemu.png)
+
+## Step 3: Identify the Source Disk
 
 Use `lsblk` to list block devices:
 
@@ -28,16 +38,33 @@ lsblk
 ![lsblk](assets/images/lsblk.png)
 
 The original VM's disk will appear as a device, e.g., `/dev/sda`, `/dev/vda`, `/dev/nvme0n1`. Look for the disk that matches the size of your VM's disk.
-
-## Step 3: Install QEMU Utilities
-
-This provides the `qemu-img` tool, which is essential for converting disk formats to our preferred `.vmdk` format to allow us to import the Image in an acceptable format.
-
-```bash
-sudo apt install update
-sudo apt install -y qemu-utils
+### Create a partition
 ```
-![Install qemu tools](assets/images/install-qemu.png)
+sudo fdisk /dev/sdb
+```
+Inside the fdisk prompt, press these keys in order, followed by Enter: n, p, 1, Enter, Enter, w.
+
+### Format the partition
+```
+sudo mkfs.ext4 /dev/sdb1
+```
+
+### Mount the partition
+```
+sudo mkdir /mnt/imagedisk
+sudo mount /dev/sdb1 /mnt/imagedisk
+```
+Expand the Filesystem (Crucial Step): If you expanded the disk after initially formatting it, you must resize the filesystem to use the new space.
+
+```
+sudo resize2fs /dev/sdb1
+```
+
+### Verify: Check that the disk is ready and shows its full size.
+```
+df -h /mnt/imagedisk
+```
+
 
 
 ## Step 4: Identify the Services Running on the Source VM
