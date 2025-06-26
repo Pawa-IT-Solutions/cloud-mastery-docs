@@ -7,7 +7,6 @@ Learn DevOps on GCP for automated app updates (CI/CD) and security by building a
 - Using Cloud Shell to access git repos and edit code
 - Setup SSH keys and add public key to Github
 - Configuring databases via Cloud SQL
-- Learn basics of Docker
 - Setting up CI/CD pipelines with Google Cloud Build
 - Pushing docker images to Google Artifact Registry
 - Securely injecting application secrets
