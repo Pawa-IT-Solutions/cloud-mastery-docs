@@ -60,37 +60,35 @@ nav:
   - Home: index.md
   - "Introduction":
       - "Cloud Mastery Training Introduction": introduction.md
-  # - "GCP Migration Lab":
-  #     - "Prepare GCP Environment": gcp-migration-lab.md
   - "Application Migration to GCP":
-      - "Migration Overview": migration-overview.md
-      - "Prepare On-Prem VM": migration-prepare-vm.md
-      - "Create VM Disk Image": migration-create-image.md
-      - "Create GCS Bucket": migration-gcs-bucket.md
-      - "Install & Configure GCloud CLI": migration-gcloud-cli.md
-      - "Upload Image to GCS": migration-upload-image.md
-      - "Create GCP VPC": migration-create-vpc.md
-      - "Import VMDK as GCP Image": migration-import-image.md
-      - "Create GCP VM Instance": migration-create-vm.md
-      - "Access & Configure VM": migration-access-vm.md
-      - "Update DNS Records": migration-dns-update.md
+      - "Migration Overview": migration/migration-overview.md
+      - "Prepare On-Prem VM": migration/migration-prepare-vm.md
+      - "Create VM Disk Image": migration/migration-create-image.md
+      - "Create GCS Bucket": migration/migration-gcs-bucket.md
+      - "Install & Configure GCloud CLI": migration/migration-gcloud-cli.md
+      - "Upload Image to GCS": migration/migration-upload-image.md
+      - "Create GCP VPC": migration/migration-create-vpc.md
+      - "Import VMDK as GCP Image": migration/migration-import-image.md
+      - "Create GCP VM Instance": migration/migration-create-vm.md
+      - "Access & Configure VM": migration/migration-access-vm.md
+      - "Update DNS Records": migration/migration-dns-update.md
   - "Automate Securely":
-      - "DevOps & CI/CD on GCP Lab": devops-lab.md
-      - "Database setup": setup-cloud-sql.md
-      - "Github setup": setup-github.md
-      - "Setup Backend Repository": setup-backend-repository.md
-      - "Setup Backend Pipeline": setup-backend-pipeline.md
-      - "Setup Frontend Repository": setup-frontend-repository.md
-      - "Setup Cloud Build for Frontend": setup-frontend-pipeline.md
-      - "Access the Application": accessing-the-application.md
+      - "DevOps & CI/CD on GCP Lab": devops/devops-lab.md
+      - "Database setup": devops/setup-cloud-sql.md
+      - "Github setup": devops/setup-github.md
+      - "Setup Backend Repository": devops/setup-backend-repository.md
+      - "Setup Backend Pipeline": devops/setup-backend-pipeline.md
+      - "Setup Frontend Repository": devops/setup-frontend-repository.md
+      - "Setup Cloud Build for Frontend": devops/setup-frontend-pipeline.md
+      - "Access the Application": devops/accessing-the-application.md
   - "Data to Dashboards":
-      - "Pipeline Overview": data-analytics-lab.md
-      - "Setup BigQuery": data-pipeline-setup-bigquery.md
-      - "Create Cloud Function": data-pipeline-create-function.md
-      - "Schedule with Cloud Scheduler": data-pipeline-schedule-job.md
-      - "Visualize with Looker Studio": data-pipeline-visualize-looker.md
+      - "Pipeline Overview": data-analytics/data-analytics-lab.md
+      - "Setup BigQuery": data-analytics/data-pipeline-setup-bigquery.md
+      - "Create Cloud Function": data-analytics/data-pipeline-create-function.md
+      - "Schedule with Cloud Scheduler": data-analytics/data-pipeline-schedule-job.md
+      - "Visualize with Looker Studio": data-analytics/data-pipeline-visualize-looker.md
   - "Build Your Agent":
-      - "Building Virtual Agent with Dialogflow CX": virtual-agent-lab.md
+      - "Building Virtual Agent with Dialogflow CX": virtual-agent/virtual-agent-lab.md
   - "End of Training":
       - "End of Training": end-of-training.md
 extra:

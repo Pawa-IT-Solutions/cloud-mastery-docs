@@ -17,7 +17,7 @@ With the skills you've developed in this training session, you're well-prepared 
 ---
 <div class="page-nav">
   <div class="nav-item">
-    <a href="../virtual-agent-lab/" class="btn-secondary">← Previous: Virtual Agents Lab </a>
+    <a href="/virtual-agent/virtual-agent-lab/" class="btn-secondary">← Previous: Virtual Agents Lab </a>
   </div>
   <div class="nav-item">
     <span><strong>Section 26</strong> -  End of Training </span>
