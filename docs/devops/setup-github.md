@@ -2,7 +2,8 @@
 For this lab, we will work with two application repositories: `cloud-mastery-backend` and `cloud-mastery-frontend`. First, we need to set up your GitHub account and configure it to work with your Google Cloud Shell environment.
 
 **Do you have a GitHub Account?**
-    If you already have a GitHub account, you can skip directly to the **[Fork the Backend Repository](#fork-the-backend-repository)** section.
+
+If you already have a GitHub account, you can skip directly to the next section: **Setup Backend Repository**
 
 ---
 
